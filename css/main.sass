@@ -1,0 +1,179 @@
+@import "color"
+body
+    background-color: #181818 !important
+    color: #ffffff !important
+    font-size: 2rem
+    overflow-x: hidden
+    font-family: GT Walsheim Pro
+    p, ul
+        font-size: calc(18px + 1vw)
+h1
+    font-size: calc(20px + 8vw) !important
+    margin: 0
+    font-weight: 700
+header
+    padding: 1px
+    background-color: #181818
+    width: 100%
+    position: sticky
+    line-height: 2rem
+    display: flex
+    font-size: .9rem
+    justify-content: center
+    align-items: center
+    z-index: 999
+    top: 0
+    div
+        margin-top: 1rem
+        display: flex
+        margin: 1.3rem 0
+        .logo
+            color: #fff
+            font-size: 1.4rem
+        a
+            text-decoration: none
+            padding: 0 20px
+            color: #9d9d9d
+            font-weight: 500
+        i
+            color: #ffffff
+        a:hover
+            color: white
+.landing
+    height: 100vh
+    width: 100vw
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    background: linear-gradient(to right, black 0%,black 50%,#000000 50%,white 50%,white 100%)
+    background-blend-mode: difference
+    h1
+        font-size: calc(30px + 10vw)
+    p
+        position: absolute
+        bottom: 0
+    b
+        color: #000
+.intro
+    padding-top: 3rem
+    font-size: 1.6rem
+    text-align: center
+    width: 100vw
+    height: 70vh
+    p
+        color: #bbbbbb
+        margin: 0 0 4vh 0
+    a
+        text-decoration: none
+        color: white
+        padding: 15px 20px
+        font-size: calc(18px + 1vw)
+        background-color: #0099ff
+        border-radius: 25px
+        transition: .2s ease-in-out
+    a:hover > i
+        transform: rotate(90deg)
+    i
+        margin-left: 10px
+        transition: .2s ease-in-out
+    a:hover
+        background-color: #00aaff
+.new
+    width: 100vw
+    height: 100vh
+    text-align: left
+    margin: 0
+    h1,p
+        padding: 0
+    a
+        padding: 10px
+        color: white
+        transition: .2s ease-in-out
+    a:hover
+        position: relative
+        top: 15px
+.grid
+    width: 100vw
+    height: 60vh
+    line-height: 3rem
+    padding-left: 5rem
+    a
+        color: white
+        i
+            font-size: calc(36px + 2vw)
+    .grid__element
+        display: flex
+        align-items: center
+        p
+            margin: 0
+            font-size: calc(18px + 1vw)
+        i
+            border-radius: 15px
+            background: rgb(43,43,43)
+            background: linear-gradient(135deg, rgba(43,43,43,1) 0%, rgba(35,35,35,1) 100%)
+            width: 70px
+            padding: 22px 0
+            text-align: center
+            margin: 0 2vw 0 0
+.about
+    width: 100vw
+    height: 100vh
+    padding-top: 5%
+    p
+        font-size: calc(9px + 1vw)
+    ul
+        padding: 0
+.contact
+    padding-top: 20vh
+    display: flex
+    flex-direction: column
+    justify-content: space-around
+    height: 40vh
+    margin-bottom: 30px
+    div
+        display: flex
+        justify-content: space-around
+        i
+            font-size: calc(8px+1vw)
+            position: absolute
+            top: 0
+            left: 0
+            right: 0
+            bottom: 0
+        i::before
+            background-color: black
+            padding: 10px
+            border-radius: 50%
+        a
+            position: relative
+            color: white
+            display: inline-block
+            text-align: center
+            background-color: #aad
+            border-radius: 50%
+            transition: .3s ease-in-out
+        a:hover
+            filter: invert(1)
+.body
+    p
+        width: calc(50px + 50vw)
+    h1,p,ul
+        margin-left: 10vw
+@media screen and ( max-width: 1000px )
+    .body
+        width: 80vw
+        h1,p,ul
+            margin-left: 5vw
+    .grid
+        padding: 100px 4vw 10px 5vw
+        a:hover
+            position: relative
+            top: 15px
+    #center-image
+        animation: persp 0.1s linear
+    .Hero-image
+        animation: fade 0.1s infinite
+    header
+        div
+            flex-direction: column
