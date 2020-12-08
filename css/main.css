@@ -33,7 +33,7 @@ body {
   color: #ffffff !important;
   font-size: 2rem;
   overflow-x: hidden;
-  font-family: GT Walsheim Pro;
+  font-family: GT Walsheim Pro, sans-serif;
 }
 
 body p, body ul {
