@@ -308,7 +308,7 @@ header div a:hover {
   margin-left: 10vw;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 600px) {
   .body {
     width: 80vw;
   }
