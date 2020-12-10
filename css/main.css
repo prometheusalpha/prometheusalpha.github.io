@@ -28,50 +28,70 @@ body {
   font-family: Google Sans, sans-serif;
 }
 
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/poppins/v15/pxiEyp8kv8JHgFVrJJnecmNE.woff2) format("woff2");
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/poppins/v15/pxiEyp8kv8JHgFVrJJfecg.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 body {
+  font-family: Poppins, sans-serif;
   background-color: #181818 !important;
   color: #ffffff !important;
   font-size: 2rem;
   overflow-x: hidden;
-  font-family: GT Walsheim Pro, sans-serif;
+  width: 100vw;
+  overflow-x: clip;
 }
 
 body p, body ul {
-  font-size: calc(18px + 1vw);
+  font-size: calc(12px + 1vw);
 }
 
 h1 {
-  font-size: calc(20px + 8vw) !important;
-  margin: 0;
+  font-size: calc(15px + 8vw) !important;
+  line-height: calc(18px + 8vw);
   font-weight: 700;
+  margin: 0;
 }
 
 header {
-  padding: 1px;
   background-color: #181818;
-  width: 100%;
-  position: -webkit-sticky;
-  position: sticky;
   line-height: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   font-size: .9rem;
+  padding: 1px;
+  top: 0;
+  width: 99vw;
+  position: -webkit-sticky;
+  position: sticky;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  z-index: 999;
-  top: 0;
 }
 
 header div {
-  margin-top: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-top: 1rem;
   margin: 1.3rem 0;
 }
 
@@ -82,9 +102,9 @@ header div .logo {
 
 header div a {
   text-decoration: none;
-  padding: 0 20px;
   color: #9d9d9d;
   font-weight: 500;
+  padding: 0 20px;
 }
 
 header div i {
@@ -93,12 +113,6 @@ header div i {
 
 header div a:hover {
   color: white;
-}
-
-@font-face {
-  font-family: GT Walsheim Pro;
-  src: url(../GT/GTWalsheimPro-Regular.ttf);
-  font-display: swap;
 }
 
 .landing {
@@ -119,7 +133,6 @@ header div a:hover {
           justify-content: center;
   background: -webkit-gradient(linear, left top, right top, from(black), color-stop(50%, black), color-stop(50%, #000000), color-stop(50%, white), to(white));
   background: linear-gradient(to right, black 0%, black 50%, #000000 50%, white 50%, white 100%);
-  background-blend-mode: difference;
 }
 
 .landing h1 {
@@ -136,11 +149,10 @@ header div a:hover {
 }
 
 .intro {
-  padding-top: 3rem;
+  height: 70vh;
   font-size: 1.6rem;
   text-align: center;
-  width: 100vw;
-  height: 70vh;
+  padding-top: 3rem;
 }
 
 .intro p {
@@ -149,11 +161,11 @@ header div a:hover {
 }
 
 .intro a {
+  font-size: calc(18px + 1vw);
+  background-color: #0099ff;
   text-decoration: none;
   color: white;
   padding: 15px 20px;
-  font-size: calc(18px + 1vw);
-  background-color: #0099ff;
   border-radius: 25px;
   -webkit-transition: .2s ease-in-out;
   transition: .2s ease-in-out;
@@ -175,7 +187,6 @@ header div a:hover {
 }
 
 .new {
-  width: 100vw;
   height: 100vh;
   text-align: left;
   margin: 0;
@@ -198,7 +209,6 @@ header div a:hover {
 }
 
 .grid {
-  width: 100vw;
   height: 60vh;
   line-height: 3rem;
   padding-left: 5rem;
@@ -206,10 +216,6 @@ header div a:hover {
 
 .grid a {
   color: white;
-}
-
-.grid a i {
-  font-size: calc(36px + 2vw);
 }
 
 .grid .grid__element {
@@ -227,17 +233,17 @@ header div a:hover {
 }
 
 .grid .grid__element i {
-  border-radius: 15px;
+  width: 70px;
+  font-size: calc(16px + 2vw);
   background: #2b2b2b;
   background: linear-gradient(135deg, #2b2b2b 0%, #232323 100%);
-  width: 70px;
-  padding: 22px 0;
+  border-radius: 15px;
   text-align: center;
+  padding: 12px 0;
   margin: 0 2vw 0 0;
 }
 
 .about {
-  width: 100vw;
   height: 100vh;
   padding-top: 5%;
 }
@@ -251,6 +257,7 @@ header div a:hover {
 }
 
 .contact {
+  padding-left: 20px;
   padding-top: 20vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -325,14 +332,6 @@ header div a:hover {
   .grid a:hover {
     position: relative;
     top: 15px;
-  }
-  #center-image {
-    -webkit-animation: persp 0.1s linear;
-            animation: persp 0.1s linear;
-  }
-  .Hero-image {
-    -webkit-animation: fade 0.1s infinite;
-            animation: fade 0.1s infinite;
   }
   header div {
     -webkit-box-orient: vertical;

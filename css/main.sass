@@ -1,49 +1,64 @@
 @import "color"
+
+@font-face
+        font-family: 'Poppins'
+        font-style: normal
+        font-display: swap
+        font-weight: 400
+        src: url(https://fonts.gstatic.com/s/poppins/v15/pxiEyp8kv8JHgFVrJJnecmNE.woff2) format('woff2');
+        unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF
+
+@font-face
+        font-family: 'Poppins'
+        font-style: normal
+        font-display: swap
+        font-weight: 400
+        src: url(https://fonts.gstatic.com/s/poppins/v15/pxiEyp8kv8JHgFVrJJfecg.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+
 body
+    font-family: Poppins, sans-serif
     background-color: #181818 !important
     color: #ffffff !important
     font-size: 2rem
     overflow-x: hidden
-    font-family: GT Walsheim Pro, sans-serif
+    width: 100vw
+    overflow-x: clip
     p, ul
-        font-size: calc(18px + 1vw)
+        font-size: calc(12px + 1vw)
 h1
-    font-size: calc(20px + 8vw) !important
-    margin: 0
+    font-size: calc(15px + 8vw) !important
+    line-height: calc(18px + 8vw)
     font-weight: 700
+    margin: 0
 header
-    padding: 1px
     background-color: #181818
-    width: 100%
-    position: sticky
     line-height: 2rem
     display: flex
     font-size: .9rem
+    padding: 1px
+    top: 0
+    width: 99vw
+    position: sticky
     justify-content: center
     align-items: center
-    z-index: 999
-    top: 0
     div
-        margin-top: 1rem
         display: flex
+
+        margin-top: 1rem
         margin: 1.3rem 0
         .logo
             color: #fff
             font-size: 1.4rem
         a
             text-decoration: none
-            padding: 0 20px
             color: #9d9d9d
             font-weight: 500
+            padding: 0 20px
         i
             color: #ffffff
         a:hover
             color: white
-
-@font-face
-    font-family: GT Walsheim Pro
-    src: url(../GT/GTWalsheimPro-Regular.ttf)
-    font-display: swap
 
 .landing
     height: 100vh
@@ -53,7 +68,6 @@ header
     align-items: center
     justify-content: center
     background: linear-gradient(to right, black 0%,black 50%,#000000 50%,white 50%,white 100%)
-    background-blend-mode: difference
     h1
         font-size: calc(30px + 10vw)
     p
@@ -62,20 +76,19 @@ header
     b
         color: #000
 .intro
-    padding-top: 3rem
+    height: 70vh
     font-size: 1.6rem
     text-align: center
-    width: 100vw
-    height: 70vh
+    padding-top: 3rem
     p
         color: #bbbbbb
         margin: 0 0 4vh 0
     a
+        font-size: calc(18px + 1vw)
+        background-color: #0099ff
         text-decoration: none
         color: white
         padding: 15px 20px
-        font-size: calc(18px + 1vw)
-        background-color: #0099ff
         border-radius: 25px
         transition: .2s ease-in-out
     a:hover > i
@@ -86,7 +99,6 @@ header
     a:hover
         background-color: #00aaff
 .new
-    width: 100vw
     height: 100vh
     text-align: left
     margin: 0
@@ -100,14 +112,12 @@ header
         position: relative
         top: 15px
 .grid
-    width: 100vw
     height: 60vh
     line-height: 3rem
     padding-left: 5rem
     a
         color: white
         i
-            font-size: calc(36px + 2vw)
     .grid__element
         display: flex
         align-items: center
@@ -115,15 +125,15 @@ header
             margin: 0
             font-size: calc(18px + 1vw)
         i
-            border-radius: 15px
+            width: 70px
+            font-size: calc(16px + 2vw)
             background: rgb(43,43,43)
             background: linear-gradient(135deg, rgba(43,43,43,1) 0%, rgba(35,35,35,1) 100%)
-            width: 70px
-            padding: 22px 0
+            border-radius: 15px
             text-align: center
+            padding: 12px 0
             margin: 0 2vw 0 0
 .about
-    width: 100vw
     height: 100vh
     padding-top: 5%
     p
@@ -131,6 +141,7 @@ header
     ul
         padding: 0
 .contact
+    padding-left: 20px
     padding-top: 20vh
     display: flex
     flex-direction: column
@@ -176,10 +187,6 @@ header
         a:hover
             position: relative
             top: 15px
-    #center-image
-        animation: persp 0.1s linear
-    .Hero-image
-        animation: fade 0.1s infinite
     header
         div
             flex-direction: column
