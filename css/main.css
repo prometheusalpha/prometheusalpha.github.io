@@ -32,7 +32,6 @@ body {
   font-size: 2rem;
   overflow-x: hidden;
   width: 100vw;
-  overflow-x: clip;
 }
 
 body p, body ul {
