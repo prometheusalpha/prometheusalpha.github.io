@@ -24,11 +24,8 @@ body {
   font-family: Google Sans, sans-serif;
 }
 
-* {
-  content-visibility: auto;
-}
-
 body {
+  content-visibility: auto;
   font-family: Poppins, sans-serif;
   background-color: #181818 !important;
   color: #ffffff !important;
