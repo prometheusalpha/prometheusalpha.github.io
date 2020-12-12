@@ -25,38 +25,39 @@ body {
 }
 
 body {
-  content-visibility: auto;
   font-family: Poppins, sans-serif;
-  background-color: #181818 !important;
-  color: #ffffff !important;
+  background-color: #181818;
+  color: #ffffff;
   font-size: 2rem;
+  content-visibility: auto;
   overflow-x: hidden;
-  width: 100vw;
 }
 
 body p, body ul {
-  font-size: calc(12px + 1vw);
+  font-size: calc(10px + 1.2vw);
 }
 
 h1 {
-  font-size: calc(15px + 8vw) !important;
-  line-height: calc(18px + 8vw);
+  font-size: calc(25px + 4vw);
+  line-height: calc(30px + 8vw);
   font-weight: 700;
-  margin: 0;
 }
 
 header {
+  z-index: 99;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  height: calc(15px + 6vw);
+  width: 99vw;
+}
+
+header div {
   background-color: #181818;
-  line-height: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-size: .9rem;
-  padding: 1px;
-  top: 0;
-  width: 99vw;
-  position: -webkit-sticky;
-  position: sticky;
+  height: 100%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -65,32 +66,60 @@ header {
           align-items: center;
 }
 
-header div {
+header div .logo {
+  color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 1rem;
-  margin: 1.3rem 0;
-}
-
-header div .logo {
-  color: #fff;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 1.4rem;
 }
 
-header div a {
+header div .logo i {
+  float: left;
+}
+
+header div .logo p {
+  float: right;
+}
+
+header div input {
+  display: none;
+}
+
+header div label {
+  position: absolute;
+  right: -200px;
+  z-index: 999;
+  cursor: pointer;
+}
+
+header div label svg {
+  margin: 0;
+  fill: white;
+  display: block;
+}
+
+header .button {
+  font-size: calc(8px + 1vw);
+  text-align: center;
+}
+
+header a {
   text-decoration: none;
   color: #9d9d9d;
   font-weight: 500;
   padding: 0 20px;
 }
 
-header div i {
-  color: #ffffff;
+header a:hover {
+  color: white;
 }
 
-header div a:hover {
-  color: white;
+header i {
+  color: #ffffff;
 }
 
 .landing {
@@ -115,7 +144,7 @@ header div a:hover {
 }
 
 .landing h1 {
-  font-size: calc(30px + 10vw);
+  font-size: calc(20px + 10vw);
 }
 
 .landing p {
@@ -136,18 +165,22 @@ header div a:hover {
 
 .intro p {
   color: #bbbbbb;
-  margin: 0 0 4vh 0;
 }
 
 .intro a {
+  display: inline-block;
   font-size: calc(18px + 1vw);
   background-color: #0099ff;
   text-decoration: none;
   color: white;
-  padding: 15px 20px;
+  padding: 0.5em 1em;
   border-radius: 25px;
   -webkit-transition: .2s ease-in-out;
   transition: .2s ease-in-out;
+}
+
+.intro a:hover {
+  background-color: #00aaff;
 }
 
 .intro a:hover > i {
@@ -161,12 +194,8 @@ header div a:hover {
   transition: .2s ease-in-out;
 }
 
-.intro a:hover {
-  background-color: #00aaff;
-}
-
 .new {
-  height: 100vh;
+  height: calc(50vw + 50vh);
   text-align: left;
   margin: 0;
 }
@@ -231,7 +260,7 @@ header div a:hover {
 }
 
 .about {
-  height: 100vh;
+  height: calc(50vw + 50vh);
   width: 70vw;
   padding-top: 5%;
 }
@@ -251,7 +280,6 @@ header div a:hover {
           flex-direction: column;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  height: 40vh;
   margin-bottom: 30px;
 }
 
@@ -284,32 +312,50 @@ header div a:hover {
 }
 
 .body p {
-  width: calc(50px + 50vw);
+  width: calc(50px + 55vw);
 }
 
 .body h1, .body p, .body ul {
   margin-left: 10vw;
 }
 
-@media screen and (max-width: 600px) {
+@media (max-width: 600px) {
   .body {
-    width: 80vw;
+    width: 90vw;
   }
   .body h1, .body p, .body ul {
-    margin-left: 5vw;
+    margin-left: 7vw;
   }
   .grid {
     padding: 100px 4vw 10px 5vw;
   }
-  .grid a:hover {
-    position: relative;
-    top: 15px;
+  header label {
+    right: 20px  !important;
   }
-  header div {
+  header .button {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    width: 110vw;
+    height: 100vh;
+    background-color: #2c3e50;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    top: calc(15px + 6vw);
+    right: -120vw;
+    z-index: 100;
+    -webkit-transition: .2s ease-in;
+    transition: .2s ease-in;
+    font-size: calc(15px + 4vw);
+  }
+  header input:checked ~ .button {
+    right: -2vw;
+  }
+  header .logo p {
+    display: none;
   }
 }
 /*# sourceMappingURL=main.css.map */
