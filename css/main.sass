@@ -1,18 +1,4 @@
-@import "color"
-a
-    text-decoration: none
-html
-    font-size: clamp(12px,calc(.7rem + .25vw),20px)
-body
-    font-family: Google Sans
-    background-color: #0d1117
-    color: #ffffff
-    font-size: 1.3rem
-    content-visibility: auto
-    overflow-x: hidden
-h1
-    font-size: 6rem
-    font-weight: 700
+$transition: cubic-bezier(0.175, 0.885, 0.32, 1.275)
 
 header
     z-index: 99
@@ -63,7 +49,6 @@ header
         align-items: center
         padding: 0 2rem
         justify-content: space-between
-
 .landing
     height: 100vh
     width: 100vw
@@ -97,34 +82,6 @@ header
         transition: .15s ease-in-out
     a:hover
         background-color: #00aaff
-.grid
-    line-height: 3rem
-    padding-left: 6vw
-    a
-        color: white
-    .grid__element
-        display: flex
-        align-items: center
-        p
-            margin: 0
-            font-size: calc(18px + 1vw)
-        i
-            width: 70px
-            height: 70px
-            font-size: 2rem
-            background: rgb(43,43,43)
-            background: linear-gradient(135deg, rgba(43,43,43,1) 0%, rgba(35,35,35,1) 100%)
-            margin: 0 2vw 0 0
-            border-radius: 20px
-            display: flex
-            justify-content: center
-            align-items: center
-.contact
-    padding-top: 20vh
-    display: flex
-    flex-direction: column
-    justify-content: space-around
-    margin-bottom: 30px
 
 figure
     display: grid
@@ -151,23 +108,27 @@ figcaption
         color: #ffffff
         &:hover
             text-decoration: underline
+    img
+        filter: invert(1)
+        transition: .3s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+        width: 3rem
+    a
+        margin-right: 3rem
+    a:hover > img
+        filter: none
+        background: #fff
+        border-radius: 50%
 .image
     background-image: url("../Image/portraitv2.png")
     background-size: cover
     background-position: 30%
-
-.title
-    position: relative
-    left: 11vw
-    top: 3.3rem
-    margin: 0
-    font-size: 8rem
 
 .knowledge
     svg
         display: block
         margin: 0 auto
         width: 175px
+    span
         transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)
     path
         transform: scaleX(11) scaleY(10)
@@ -177,9 +138,6 @@ figcaption
     p
         margin: .8rem 0
     section
-        width: 80vw
-        margin: auto
-        display: grid
         grid-template-columns: 1fr 1fr
         div
             text-align: center
@@ -191,56 +149,26 @@ figcaption
 .design
     background: #d1e1e0
     color: #26555d
-.item
-    box-sizing: border-box
-    padding: 1rem 8vw
-    height: 40rem
-    display: flex
-    flex-direction: column
-    justify-content: space-evenly
-.small
-    padding: 1rem 4vw
-    justify-content: space-around
-.item:hover
-    svg
-        margin: 2rem auto
-@media (max-width: 1200px)
-    .body
-        width: 90vw
-        h1,p,ul
-            margin-left: 7vw
-    .grid
-        padding: 100px 4vw 10px 5vw
-    header
-        label
-            display: block !important
-        .button
-            flex-direction: column
-            width: 100vw
-            height: 100vh
-            background-color: #0d1117
-            display: flex
-            position: absolute
-            top: 0
-            left: -100vw
-            z-index: 100
-            transition: .2s ease-in
-            padding: 10rem 0
-            a
-                font-size: 3rem
-                padding: 0 !important
-                margin: 2rem 0
-        input:checked ~ .button
-            left: 0 !important
-        .logo
-            p
-                display: none
-    .knowledge
-        section
-            grid-template-columns: 1fr
-    .web
-        grid-column: 1 / span 1
-    figure
-        grid-template-columns: 1fr
+
+.works
+    section
+        height: 120vh
+        grid-gap: 1rem
+        grid-template: repeat(6,1fr) / 1fr 1fr
         div
-            display: none
+            background-size: cover
+            border-radius: 1rem
+            position: relative
+            filter: grayscale(1)
+            transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+            &:hover
+                filter: grayscale(0)
+            p
+                font-size: 2rem
+                position: absolute
+                opacity: 0
+                transition: 1s $transition
+                bottom: -1rem
+@import "color"
+@import "component"
+@import "media"

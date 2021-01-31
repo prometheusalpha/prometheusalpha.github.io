@@ -1,0 +1,40 @@
+@media (max-width: 1200px)
+    .body
+        width: 90vw
+        h1,p,ul
+            margin-left: 7vw
+    .grid
+        padding: 100px 4vw 10px 5vw
+    header
+        label
+            display: block !important
+        .button
+            flex-direction: column
+            width: 100vw
+            height: 100vh
+            background-color: #0d1117
+            display: flex
+            position: absolute
+            top: 0
+            left: -100vw
+            z-index: 100
+            transition: .2s ease-in
+            padding: 10rem 0
+            a
+                font-size: 3rem
+                padding: 0 !important
+                margin: 2rem 0
+        input:checked ~ .button
+            left: 0 !important
+        .logo
+            p
+                display: none
+    .knowledge
+        section
+            grid-template-columns: 1fr
+    .web
+        grid-column: 1 / span 1
+    figure
+        grid-template-columns: 1fr
+        div
+            display: none
