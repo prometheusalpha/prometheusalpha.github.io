@@ -550,5 +550,11 @@ h1 {
   .aboutme figure div {
     display: none;
   }
+  .works .container {
+    -ms-grid-rows: (1fr)[12];
+    -ms-grid-columns: 1fr;
+        grid-template: repeat(12, 1fr)/1fr;
+    height: 240vh;
+  }
 }
 /*# sourceMappingURL=main.css.map */
