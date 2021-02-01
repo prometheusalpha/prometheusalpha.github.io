@@ -480,7 +480,7 @@ a {
 }
 
 html {
-  font-size: clamp(12px, calc(.7rem + .25vw), 20px);
+  font-size: clamp(6px, calc(.5rem + .26vw), 20px);
 }
 
 body {
@@ -538,10 +538,11 @@ h1 {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }
+  .knowledge .item {
+    height: auto;
+  }
   .knowledge .web {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
-    grid-column: 1 / span 1;
+    grid-area: span 2 / span 1;
   }
   .aboutme figure {
     -ms-grid-columns: 1fr;
