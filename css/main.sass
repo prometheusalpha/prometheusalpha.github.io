@@ -1,54 +1,4 @@
 $transition: cubic-bezier(0.175, 0.885, 0.32, 1.275)
-
-header
-    z-index: 99
-    position: sticky
-    top: 0
-    height: 5rem
-    width: 100vw
-    div
-        background-color: #161b22
-        display: flex
-        height: 100%
-        justify-content: center
-        align-items: center
-        .logo
-            color: #fff
-            display: flex
-            align-items: center
-            font-size: 1.4rem
-            i
-                float: left
-            p
-                float: right
-        input
-            display: none
-        label
-            position: absolute
-            left: 20px
-            display: none
-            z-index: 999
-            cursor: pointer
-            svg
-                margin: 0
-                fill: white
-                display: block
-    .button
-        font-size: 1.42rem
-        text-align: center
-    a
-        text-decoration: none
-        color: #9d9d9d
-        font-weight: 500
-        padding: 0 20px
-    a:hover
-        color: white
-    .head
-        display: flex
-        width: 100vw
-        align-items: center
-        padding: 0 2rem
-        justify-content: space-between
 .landing
     height: 100vh
     width: 100vw
@@ -63,6 +13,7 @@ header
     p
         position: absolute
         bottom: 0
+        font-size: 2rem
     b
         color: #000
 .intro
@@ -82,47 +33,46 @@ header
         transition: .15s ease-in-out
     a:hover
         background-color: #00aaff
-
-figure
-    display: grid
-    grid-template-columns: 1fr 1fr
-    height: 90vh
-    width: 80vw
-    overflow: hidden
-    margin: 0 auto
-    background: #161b22
-figcaption
-    padding: 4rem 1.5rem
-    p
-        font-size: 1.5rem
-        line-height: 2.4rem
-        text-align: justify
-    div
-        width: 10rem
-        height: 3px
-        background: #fff
-        margin: 1rem 0
-    b
-        word-break: break-all
-        font-size: 3.5rem
-        color: #ffffff
-        &:hover
-            text-decoration: underline
-    img
-        filter: invert(1)
-        transition: .3s cubic-bezier(0.175, 0.885, 0.32, 1.275)
-        width: 3rem
-    a
-        margin-right: 3rem
-    a:hover > img
-        filter: none
-        background: #fff
-        border-radius: 50%
-.image
-    background-image: url("../Image/portraitv2.png")
-    background-size: cover
-    background-position: 30%
-
+.aboutme
+    figure
+        display: grid
+        grid-template-columns: 1fr 1fr
+        height: 90vh
+        width: 80vw
+        overflow: hidden
+        margin: 0 auto
+        background: #161b22
+    figcaption
+        padding: 4rem 1.5rem
+        p
+            font-size: 1.5rem
+            line-height: 2.4rem
+            text-align: justify
+        div
+            width: 10rem
+            height: 3px
+            background: #fff
+            margin: 1rem 0
+        b
+            word-break: break-all
+            font-size: 3.5rem
+            color: #ffffff
+            &:hover
+                text-decoration: underline
+        img
+            filter: invert(1)
+            transition: .3s $transition
+            width: 3rem
+        a
+            margin-right: 3rem
+        a:hover > img
+            filter: none
+            background: #fff
+            border-radius: 50%
+    .image
+        background-image: url("../Image/portraitv2.png")
+        background-size: cover
+        background-position: 30%
 .knowledge
     svg
         display: block
@@ -141,15 +91,14 @@ figcaption
         grid-template-columns: 1fr 1fr
         div
             text-align: center
-.web
-    background: #3bab87
-    grid-column: 1 / span 2
-.code
-    background: #98bec8
-.design
-    background: #d1e1e0
-    color: #26555d
-
+    .web
+        background: #3bab87
+        grid-column: 1 / span 2
+    .code
+        background: #98bec8
+    .design
+        background: #d1e1e0
+        color: #26555d
 .works
     section
         height: 120vh
@@ -160,15 +109,16 @@ figcaption
             border-radius: 1rem
             position: relative
             filter: grayscale(1)
-            transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+            transition: .5s $transition
             &:hover
                 filter: grayscale(0)
             p
                 font-size: 2rem
                 position: absolute
                 opacity: 0
-                transition: 1s $transition
+                transition: .5s $transition
                 bottom: -1rem
-@import "color"
 @import "component"
+@import "header"
+@import "utility"
 @import "media"
