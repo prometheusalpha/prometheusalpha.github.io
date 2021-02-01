@@ -20,6 +20,7 @@ $transition: cubic-bezier(0.175, 0.885, 0.32, 1.275)
     font-size: 1.6rem
     text-align: center
     padding-top: 3rem
+    height: 50rem
     p
         color: #bbbbbb
     a
@@ -34,6 +35,7 @@ $transition: cubic-bezier(0.175, 0.885, 0.32, 1.275)
     a:hover
         background-color: #00aaff
 .aboutme
+    position: relative
     figure
         display: grid
         grid-template-columns: 1fr 1fr
@@ -57,8 +59,6 @@ $transition: cubic-bezier(0.175, 0.885, 0.32, 1.275)
             word-break: break-all
             font-size: 3.5rem
             color: #ffffff
-            &:hover
-                text-decoration: underline
         img
             filter: invert(1)
             transition: .3s $transition
@@ -69,10 +69,22 @@ $transition: cubic-bezier(0.175, 0.885, 0.32, 1.275)
             filter: none
             background: #fff
             border-radius: 50%
+    #copy-alert
+        position: absolute
+        top: 6rem
+        font-size: 2rem
+        width: 12rem
+        z-index: -99
+        left: 40%
+        opacity: 0
+        &.show
+            animation: float 1.5s ease-in-out
     .image
         background-image: url("../Image/portraitv2.png")
         background-size: cover
         background-position: 30%
+    .copy
+        cursor: pointer
 .knowledge
     svg
         display: block

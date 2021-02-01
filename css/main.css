@@ -37,6 +37,7 @@
   font-size: 1.6rem;
   text-align: center;
   padding-top: 3rem;
+  height: 50rem;
 }
 
 .intro p {
@@ -57,6 +58,10 @@
 
 .intro a:hover {
   background-color: #00aaff;
+}
+
+.aboutme {
+  position: relative;
 }
 
 .aboutme figure {
@@ -94,10 +99,6 @@
   color: #ffffff;
 }
 
-.aboutme figcaption b:hover {
-  text-decoration: underline;
-}
-
 .aboutme figcaption img {
   -webkit-filter: invert(1);
           filter: invert(1);
@@ -117,10 +118,29 @@
   border-radius: 50%;
 }
 
+.aboutme #copy-alert {
+  position: absolute;
+  top: 6rem;
+  font-size: 2rem;
+  width: 12rem;
+  z-index: -99;
+  left: 40%;
+  opacity: 0;
+}
+
+.aboutme #copy-alert.show {
+  -webkit-animation: float 1.5s ease-in-out;
+          animation: float 1.5s ease-in-out;
+}
+
 .aboutme .image {
   background-image: url("../Image/portraitv2.png");
   background-size: cover;
   background-position: 30%;
+}
+
+.aboutme .copy {
+  cursor: pointer;
 }
 
 .knowledge svg {
@@ -288,6 +308,52 @@
 .manggon:hover > p {
   opacity: 1;
   left: -3rem;
+}
+
+@-webkit-keyframes float {
+  0% {
+    top: 8rem;
+    opacity: 0;
+  }
+  20% {
+    top: 5rem;
+    opacity: 1;
+  }
+  50% {
+    top: 5rem;
+    opacity: 1;
+  }
+  80% {
+    top: 5rem;
+    opacity: 1;
+  }
+  100% {
+    top: 8rem;
+    opacity: 0;
+  }
+}
+
+@keyframes float {
+  0% {
+    top: 8rem;
+    opacity: 0;
+  }
+  20% {
+    top: 5rem;
+    opacity: 1;
+  }
+  50% {
+    top: 5rem;
+    opacity: 1;
+  }
+  80% {
+    top: 5rem;
+    opacity: 1;
+  }
+  100% {
+    top: 8rem;
+    opacity: 0;
+  }
 }
 
 header {
