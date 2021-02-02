@@ -135,8 +135,8 @@
 }
 
 .aboutme #copy-alert.show {
-  -webkit-animation: float 1.5s ease-in-out;
-          animation: float 1.5s ease-in-out;
+  -webkit-animation: float 1s ease-in-out;
+          animation: float 1s ease-in-out;
 }
 
 .aboutme .image {
