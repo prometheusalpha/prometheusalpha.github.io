@@ -78,6 +78,7 @@
 
 .aboutme figcaption {
   padding: 4rem 1.5rem;
+  position: relative;
 }
 
 .aboutme figcaption p {
@@ -88,14 +89,14 @@
 
 .aboutme figcaption div {
   width: 10rem;
-  height: 3px;
+  height: 2.6px;
   background: #fff;
   margin: 1rem 0;
 }
 
 .aboutme figcaption b {
   word-break: break-all;
-  font-size: 3.5rem;
+  font-size: 3rem;
   color: #ffffff;
 }
 
@@ -105,6 +106,11 @@
   -webkit-transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   width: 3rem;
+}
+
+.aboutme figcaption .copy {
+  position: absolute;
+  right: 2rem;
 }
 
 .aboutme figcaption a {

@@ -46,23 +46,27 @@ $transition: cubic-bezier(0.175, 0.885, 0.32, 1.275)
         background: #161b22
     figcaption
         padding: 4rem 1.5rem
+        position: relative
         p
             font-size: 1.5rem
             line-height: 2.4rem
             text-align: justify
         div
             width: 10rem
-            height: 3px
+            height: 2.6px
             background: #fff
             margin: 1rem 0
         b
             word-break: break-all
-            font-size: 3.5rem
+            font-size: 3rem
             color: #ffffff
         img
             filter: invert(1)
             transition: .3s $transition
             width: 3rem
+        .copy
+            position: absolute
+            right: 2rem
         a
             margin-right: 3rem
         a:hover > img
