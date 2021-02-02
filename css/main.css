@@ -81,26 +81,26 @@
   position: relative;
 }
 
-.aboutme figcaption p {
+.aboutme .description {
   font-size: 1.5rem;
   line-height: 2.4rem;
   text-align: justify;
 }
 
-.aboutme figcaption div {
+.aboutme .line {
   width: 10rem;
   height: 2.6px;
   background: #fff;
   margin: 1rem 0;
 }
 
-.aboutme figcaption b {
+.aboutme #mail {
   word-break: break-all;
   font-size: 3rem;
   color: #ffffff;
 }
 
-.aboutme figcaption img {
+.aboutme .social_icon {
   -webkit-filter: invert(1);
           filter: invert(1);
   -webkit-transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -108,16 +108,11 @@
   width: 3rem;
 }
 
-.aboutme figcaption .copy {
-  position: absolute;
-  right: 2rem;
-}
-
-.aboutme figcaption a {
+.aboutme a {
   margin-right: 3rem;
 }
 
-.aboutme figcaption a:hover > img {
+.aboutme a:hover > img {
   -webkit-filter: none;
           filter: none;
   background: #fff;
@@ -126,12 +121,11 @@
 
 .aboutme #copy-alert {
   position: absolute;
-  top: 6rem;
+  top: 10rem;
   font-size: 2rem;
   width: 12rem;
   z-index: -99;
   left: 40%;
-  opacity: 0;
 }
 
 .aboutme #copy-alert.show {
@@ -145,8 +139,13 @@
   background-position: 30%;
 }
 
-.aboutme .copy {
+.aboutme .copy_btn {
   cursor: pointer;
+  position: absolute;
+  right: 2rem;
+  width: 3rem;
+  -webkit-filter: invert(1);
+          filter: invert(1);
 }
 
 .knowledge svg {
@@ -316,52 +315,6 @@
   left: -3rem;
 }
 
-@-webkit-keyframes float {
-  0% {
-    top: 8rem;
-    opacity: 0;
-  }
-  20% {
-    top: 5rem;
-    opacity: 1;
-  }
-  50% {
-    top: 5rem;
-    opacity: 1;
-  }
-  80% {
-    top: 5rem;
-    opacity: 1;
-  }
-  100% {
-    top: 8rem;
-    opacity: 0;
-  }
-}
-
-@keyframes float {
-  0% {
-    top: 8rem;
-    opacity: 0;
-  }
-  20% {
-    top: 5rem;
-    opacity: 1;
-  }
-  50% {
-    top: 5rem;
-    opacity: 1;
-  }
-  80% {
-    top: 5rem;
-    opacity: 1;
-  }
-  100% {
-    top: 8rem;
-    opacity: 0;
-  }
-}
-
 header {
   z-index: 99;
   position: -webkit-sticky;
@@ -425,13 +378,33 @@ header div label svg {
 header .button {
   font-size: 1.42rem;
   text-align: center;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .button__bg {
+  position: absolute;
+  width: 8rem;
+  height: 4rem;
+  background: rgba(225, 225, 225, 0.2);
+  border-radius: 8px;
+  opacity: 0;
+  -webkit-transition: 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 header a {
+  z-index: 2;
   text-decoration: none;
   color: #9d9d9d;
   font-weight: 500;
-  padding: 0 20px;
+  display: inline-block;
+  width: 8rem;
 }
 
 header a:hover {
@@ -450,6 +423,49 @@ header .head {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+header a:nth-child(1):hover ~ .button__bg {
+  -webkit-transform: translateX(calc(8rem * 1 - 8rem));
+          transform: translateX(calc(8rem * 1 - 8rem));
+  opacity: 1;
+}
+
+header a:nth-child(2):hover ~ .button__bg {
+  -webkit-transform: translateX(calc(8rem * 2 - 8rem));
+          transform: translateX(calc(8rem * 2 - 8rem));
+  opacity: 1;
+}
+
+header a:nth-child(3):hover ~ .button__bg {
+  -webkit-transform: translateX(calc(8rem * 3 - 8rem));
+          transform: translateX(calc(8rem * 3 - 8rem));
+  opacity: 1;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  font-size: clamp(6px, calc(.5rem + .26vw), 20px);
+}
+
+body {
+  font-family: Google Sansa;
+  background-color: #0d1117;
+  color: #ffffff;
+  font-size: 1.3rem;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 3rem;
+  content-visibility: auto;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 6rem;
+  font-weight: 700;
 }
 
 .sm {
@@ -481,29 +497,50 @@ header .head {
   src: url("../fonts/a.ttf") format("truetype");
 }
 
-a {
-  text-decoration: none;
+@-webkit-keyframes float {
+  0% {
+    top: 8rem;
+    opacity: 0;
+  }
+  20% {
+    top: 5rem;
+    opacity: 1;
+  }
+  50% {
+    top: 5rem;
+    opacity: 1;
+  }
+  80% {
+    top: 5rem;
+    opacity: 1;
+  }
+  100% {
+    top: 8rem;
+    opacity: 0;
+  }
 }
 
-html {
-  font-size: clamp(6px, calc(.5rem + .26vw), 20px);
-}
-
-body {
-  font-family: Google Sansa;
-  background-color: #0d1117;
-  color: #ffffff;
-  font-size: 1.3rem;
-  margin: 0;
-  padding: 0;
-  padding-bottom: 3rem;
-  content-visibility: auto;
-  overflow-x: hidden;
-}
-
-h1 {
-  font-size: 6rem;
-  font-weight: 700;
+@keyframes float {
+  0% {
+    top: 8rem;
+    opacity: 0;
+  }
+  20% {
+    top: 5rem;
+    opacity: 1;
+  }
+  50% {
+    top: 5rem;
+    opacity: 1;
+  }
+  80% {
+    top: 5rem;
+    opacity: 1;
+  }
+  100% {
+    top: 8rem;
+    opacity: 0;
+  }
 }
 
 @media (max-width: 1200px) {

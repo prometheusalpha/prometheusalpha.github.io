@@ -1,4 +1,5 @@
 $transition: cubic-bezier(0.175, 0.885, 0.32, 1.275)
+$blackandwhite: linear-gradient(to right, black 0%,black 50%,#000000 50%,white 50%,white 100%)
 .landing
     height: 100vh
     width: 100vw
@@ -7,7 +8,7 @@ $transition: cubic-bezier(0.175, 0.885, 0.32, 1.275)
     flex-direction: column
     align-items: center
     justify-content: center
-    background: linear-gradient(to right, black 0%,black 50%,#000000 50%,white 50%,white 100%)
+    background: $blackandwhite
     h1
         font-size: calc(20px + 10vw)
     p
@@ -47,55 +48,55 @@ $transition: cubic-bezier(0.175, 0.885, 0.32, 1.275)
     figcaption
         padding: 4rem 1.5rem
         position: relative
-        p
-            font-size: 1.5rem
-            line-height: 2.4rem
-            text-align: justify
-        div
-            width: 10rem
-            height: 2.6px
-            background: #fff
-            margin: 1rem 0
-        b
-            word-break: break-all
-            font-size: 3rem
-            color: #ffffff
-        img
-            filter: invert(1)
-            transition: .3s $transition
-            width: 3rem
-        .copy
-            position: absolute
-            right: 2rem
-        a
-            margin-right: 3rem
-        a:hover > img
-            filter: none
-            background: #fff
-            border-radius: 50%
+    .description
+        font-size: 1.5rem
+        line-height: 2.4rem
+        text-align: justify
+    .line
+        width: 10rem
+        height: 2.6px
+        background: #fff
+        margin: 1rem 0
+    #mail
+        word-break: break-all
+        font-size: 3rem
+        color: #ffffff
+    .social_icon
+        filter: invert(1)
+        transition: .3s $transition
+        width: 3rem
+    a
+        margin-right: 3rem
+    a:hover > img
+        filter: none
+        background: #fff
+        border-radius: 50%
     #copy-alert
         position: absolute
-        top: 6rem
+        top: 10rem
         font-size: 2rem
         width: 12rem
         z-index: -99
         left: 40%
-        opacity: 0
         &.show
             animation: float 1s ease-in-out
     .image
         background-image: url("../Image/portraitv2.png")
         background-size: cover
         background-position: 30%
-    .copy
+    .copy_btn
         cursor: pointer
+        position: absolute
+        right: 2rem
+        width: 3rem
+        filter: invert(1)
 .knowledge
     svg
         display: block
         margin: 0 auto
         width: 175px
     span
-        transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+        transition: 0.3s $transition
     path
         transform: scaleX(11) scaleY(10)
     h2
@@ -137,4 +138,4 @@ $transition: cubic-bezier(0.175, 0.885, 0.32, 1.275)
 @import "component"
 @import "header"
 @import "utility"
-@import "media"
+@import "utils"

@@ -34,11 +34,24 @@ header
     .button
         font-size: 1.42rem
         text-align: center
+        position: relative
+        display: flex
+        align-items: center
+        &__bg
+            position: absolute
+            width: 8rem
+            height: 4rem
+            background: rgba(225,225,225,0.2)
+            border-radius: 8px
+            opacity: 0
+            transition: .2s $transition
     a
+        z-index: 2
         text-decoration: none
         color: #9d9d9d
         font-weight: 500
-        padding: 0 20px
+        display: inline-block
+        width: 8rem
     a:hover
         color: white
     .head
@@ -47,3 +60,16 @@ header
         align-items: center
         padding: 0 2rem
         justify-content: space-between
+    @for $i from 1 through 3
+        a:nth-child(#{$i}):hover ~ .button__bg
+            transform: translateX(calc(8rem * #{$i} - 8rem))
+            opacity: 1
+
+    // a:nth-child(1):hover ~ .button__bg
+    //     opacity: 1
+    // a:nth-child(2):hover ~ .button__bg
+    //     transform: translateX(8rem)
+    //     opacity: 1
+    // a:nth-child(3):hover ~ .button__bg
+    //     transform: translateX(16rem)
+    //     opacity: 1
