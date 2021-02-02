@@ -51,7 +51,7 @@
   text-decoration: none;
   color: white;
   padding: 0.5em 1em;
-  border-radius: 25px;
+  border-radius: 3rem;
   -webkit-transition: .15s ease-in-out;
   transition: .15s ease-in-out;
 }
@@ -392,7 +392,7 @@ header .button__bg {
   width: 8rem;
   height: 4rem;
   background: rgba(225, 225, 225, 0.2);
-  border-radius: 8px;
+  border-radius: 1.5rem;
   opacity: 0;
   -webkit-transition: 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transition: 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -401,14 +401,10 @@ header .button__bg {
 header a {
   z-index: 2;
   text-decoration: none;
-  color: #9d9d9d;
+  color: #ffffff;
   font-weight: 500;
   display: inline-block;
   width: 8rem;
-}
-
-header a:hover {
-  color: white;
 }
 
 header .head {

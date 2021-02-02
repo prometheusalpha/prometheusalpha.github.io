@@ -42,18 +42,16 @@ header
             width: 8rem
             height: 4rem
             background: rgba(225,225,225,0.2)
-            border-radius: 8px
+            border-radius: 1.5rem
             opacity: 0
             transition: .2s $transition
     a
         z-index: 2
         text-decoration: none
-        color: #9d9d9d
+        color: #ffffff
         font-weight: 500
         display: inline-block
         width: 8rem
-    a:hover
-        color: white
     .head
         display: flex
         width: 100vw
@@ -64,12 +62,3 @@ header
         a:nth-child(#{$i}):hover ~ .button__bg
             transform: translateX(calc(8rem * #{$i} - 8rem))
             opacity: 1
-
-    // a:nth-child(1):hover ~ .button__bg
-    //     opacity: 1
-    // a:nth-child(2):hover ~ .button__bg
-    //     transform: translateX(8rem)
-    //     opacity: 1
-    // a:nth-child(3):hover ~ .button__bg
-    //     transform: translateX(16rem)
-    //     opacity: 1
