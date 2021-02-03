@@ -36,8 +36,16 @@
     </header>
     <section class="intro">
       <h1>Who am I ?</h1>
-      <h1>I am a software engineering student.</h1>
-      <a href="#aboutme"> Know more </a>
+      <h1>
+        <p
+          class="typewrite"
+          data-period="1000"
+          data-type='[ "Hi, Im Hoang.", "I am a software engineering student.", "I Love Design.", "I Love to Develop." ]'
+        >
+          <span class="wrap"></span>
+        </p>
+      </h1>
+      <a href="#aboutme" class="intro__knowmore"> Know more </a>
     </section>
     <section class="aboutme" id="aboutme">
       <h1 class="title">Hello.</h1>
@@ -48,7 +56,7 @@
           <img
             src="Image/clipboard.svg"
             class="copy_btn"
-            onclick="copyText('hoangnguyen.hn212.hn@gmail.com')"
+            onclick="copyText()"
           />
           <div class="line"></div>
           <p class="description">
@@ -142,27 +150,6 @@
         <div class="manggon sm"><p class="left">Manggon clone</p></div>
       </section>
     </section>
-    <script>
-      function copyText(text) {
-        navigator.clipboard.writeText(text);
-        if (document.getElementById("copy-alert").className != "show") {
-          document.getElementById("copy-alert").classList.add("show");
-        }
-        setTimeout(function () {
-          document.getElementById("copy-alert").classList.remove("show");
-        }, 1000);
-      }
-      var i = 0;
-      var txt = "Lorem ipsum typing effect!"; /* The text */
-      var speed = 50; /* The speed/duration of the effect in milliseconds */
-
-      function typeWriter() {
-        if (i < txt.length) {
-          document.getElementById("demo").innerHTML += txt.charAt(i);
-          i++;
-          setTimeout(typeWriter, speed);
-        }
-      }
-    </script>
+    <script src="index.js"></script>
   </body>
 </html>

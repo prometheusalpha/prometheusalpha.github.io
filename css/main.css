@@ -40,11 +40,7 @@
   height: 50rem;
 }
 
-.intro p {
-  color: #bbbbbb;
-}
-
-.intro a {
+.intro__knowmore {
   display: inline-block;
   font-size: calc(18px + 1vw);
   background-color: #21262d;
@@ -56,8 +52,12 @@
   transition: .15s ease-in-out;
 }
 
-.intro a:hover {
+.intro__knowmore:hover {
   background-color: #00aaff;
+}
+
+.intro .typewrite {
+  height: 6rem;
 }
 
 .aboutme {
@@ -439,6 +439,30 @@ header a:nth-child(3):hover ~ .button__bg {
   opacity: 1;
 }
 
+.sm {
+  grid-area: span 2 / span 1;
+}
+
+.xl {
+  grid-area: span 4 / span 1;
+}
+
+.left {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  left: -1rem;
+}
+
+.right {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transform-origin: 100% 0;
+          transform-origin: 100% 0;
+  right: 0;
+}
+
 a {
   text-decoration: none;
 }
@@ -462,30 +486,6 @@ body {
 h1 {
   font-size: 6rem;
   font-weight: 700;
-}
-
-.sm {
-  grid-area: span 2 / span 1;
-}
-
-.xl {
-  grid-area: span 4 / span 1;
-}
-
-.left {
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
-  -webkit-transform-origin: 0 0;
-          transform-origin: 0 0;
-  left: -1rem;
-}
-
-.right {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-  -webkit-transform-origin: 100% 0;
-          transform-origin: 100% 0;
-  right: 0;
 }
 
 @font-face {
