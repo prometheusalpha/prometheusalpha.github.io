@@ -16,7 +16,7 @@ a
 html
     font-size: clamp(6px,calc(.5rem + .26vw),20px)
 body
-    font-family: Google Sansa
+    font-family: SF Pro Display
     background-color: #0d1117
     color: #ffffff
     font-size: 1.3rem
@@ -29,7 +29,7 @@ h1
     font-size: 6rem
     font-weight: 700
 @font-face
-    font-family: Google Sansa
+    font-family: Google Sans
     src: url("../fonts/a.ttf") format('truetype')
 @keyframes float
     0%
@@ -65,13 +65,16 @@ h1
             padding: 10rem 0
             a
                 font-size: 3rem
+                width: 20rem
                 padding: 0 !important
-                margin: 2rem 0
+                margin: 4rem 0
         input:checked ~ .button
             left: 0 !important
         .logo
             p
                 display: none
+        .button__bg
+            display: none
     .knowledge
         section
             grid-template-columns: 1fr

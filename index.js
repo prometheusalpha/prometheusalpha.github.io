@@ -17,7 +17,7 @@ class TxtType {
     this.toRotate = toRotate;
     this.el = el;
     this.loopNum = 0;
-    this.period = parseInt(period, 10) || 1000;
+    this.period = parseInt(period, 10) || 150;
     this.txt = "";
     this.tick();
     this.isDeleting = false;
@@ -47,7 +47,7 @@ class TxtType {
     } else if (this.isDeleting && this.txt === "") {
       this.isDeleting = false;
       this.loopNum++;
-      delta = 500;
+      delta = 1000;
     }
 
     setTimeout(function () {
