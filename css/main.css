@@ -58,7 +58,7 @@
 }
 
 .intro .typewrite {
-  height: 15rem;
+  min-height: 15rem;
 }
 
 .intro .typewrite .wrap {
