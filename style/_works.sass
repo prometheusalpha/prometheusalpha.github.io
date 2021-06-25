@@ -1,0 +1,59 @@
+$transition: cubic-bezier(0.175, 0.885, 0.32, 1.275)
+.works
+    h1
+        font-size: 4rem
+    section
+        height: 120vh
+        grid-gap: 1rem
+        grid-template: repeat(6,1fr) / 1fr 1fr
+        div
+            background-size: cover
+            border-radius: 1rem
+            position: relative
+            filter: grayscale(1)  brightness(0.8)
+            transition: .5s $transition
+            &:hover
+                filter: grayscale(0)
+            p
+                font-size: 1rem
+                position: absolute
+                opacity: 0
+                transition: .5s $transition
+                bottom: -1rem
+.container
+    width: 100%
+    display: grid
+    margin: auto
+.sm
+    grid-area: span 2 / span 1
+.xl
+    grid-area: span 4 / span 1
+.left
+    transform: rotate(-90deg)
+    transform-origin: 0 0
+    left: -1rem
+.right
+    transform: rotate(90deg)
+    transform-origin: 100% 0
+    right: 0
+
+.webdev
+    background: url("../Image/webdev.png")
+    &:hover > p
+        opacity: 1
+        right: -1.3rem
+.csstrick
+    background: url("../Image/csst.png")
+    &:hover > p
+        opacity: 1
+        left: -1.3rem
+.data
+    background: url("../Image/crawl.png")
+    &:hover > p
+        opacity: 1
+        right: -1.3rem
+.manggon
+    background: url("../Image/manggon.png")
+    &:hover > p
+        opacity: 1
+        left: -1.3rem

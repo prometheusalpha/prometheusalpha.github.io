@@ -17,26 +17,31 @@ a {
 }
 
 html {
-  font-size: clamp(8px, 3vw, 24px);
+  font-size: clamp(16px, 3vw, 24px);
 }
 
-.home {
-  height: 100vh;
-}
-
-.home .max-width {
+.max-width {
   height: 100%;
   max-width: 1000px;
   margin: auto;
+  padding-top: 10rem;
 }
 
-.home .red {
+h1 {
+  font-size: 4rem;
+}
+
+.home {
+  position: relative;
+  height: 100vh;
+}
+
+.home .blue {
   color: #2980b9;
 }
 
 .home article {
   height: 100%;
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -47,12 +52,6 @@ html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 3vh 0;
-}
-
-.home h1 {
-  font-size: 5rem;
-  margin: 0;
 }
 
 .home .typewrite {
@@ -61,5 +60,189 @@ html {
 
 .home .wrap {
   border-right: 3px solid #808080;
+}
+
+.home h1 {
+  margin: 0;
+}
+
+.logo {
+  z-index: 99;
+  position: fixed;
+  right: 8vw;
+  top: 4rem;
+}
+
+.about {
+  overflow-x: hidden;
+}
+
+.about h1 {
+  font-size: 4rem;
+}
+
+.about .portrait {
+  width: 100vw;
+  height: 50vw;
+  background-image: url("../Image/portrait.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.about h2 {
+  font-size: 2.5rem;
+}
+
+.about b {
+  font-size: 1.5rem;
+}
+
+.about .description {
+  max-width: 30rem;
+  padding-right: 1rem;
+  margin: auto;
+}
+
+.works h1 {
+  font-size: 4rem;
+}
+
+.works section {
+  height: 120vh;
+  grid-gap: 1rem;
+  -ms-grid-rows: (1fr)[6];
+  -ms-grid-columns: 1fr 1fr;
+      grid-template: repeat(6, 1fr)/1fr 1fr;
+}
+
+.works section div {
+  background-size: cover;
+  border-radius: 1rem;
+  position: relative;
+  -webkit-filter: grayscale(1) brightness(0.8);
+          filter: grayscale(1) brightness(0.8);
+  -webkit-transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.works section div:hover {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+}
+
+.works section div p {
+  font-size: 1rem;
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  bottom: -1rem;
+}
+
+.container {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  margin: auto;
+}
+
+.sm {
+  grid-area: span 2 / span 1;
+}
+
+.xl {
+  grid-area: span 4 / span 1;
+}
+
+.left {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  left: -1rem;
+}
+
+.right {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transform-origin: 100% 0;
+          transform-origin: 100% 0;
+  right: 0;
+}
+
+.webdev {
+  background: url("../Image/webdev.png");
+}
+
+.webdev:hover > p {
+  opacity: 1;
+  right: -1.3rem;
+}
+
+.csstrick {
+  background: url("../Image/csst.png");
+}
+
+.csstrick:hover > p {
+  opacity: 1;
+  left: -1.3rem;
+}
+
+.data {
+  background: url("../Image/crawl.png");
+}
+
+.data:hover > p {
+  opacity: 1;
+  right: -1.3rem;
+}
+
+.manggon {
+  background: url("../Image/manggon.png");
+}
+
+.manggon:hover > p {
+  opacity: 1;
+  left: -1.3rem;
+}
+
+@media (max-width: 1200px) {
+  .works .container {
+    width: 100%;
+    -ms-grid-rows: (1fr)[12];
+    -ms-grid-columns: 1fr;
+        grid-template: repeat(12, 1fr)/1fr;
+    height: 240vh;
+    padding: 0 2rem;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+}
+
+.contact section {
+  color: #2980b9;
+}
+
+.contact p {
+  cursor: pointer;
+  margin: 0;
+  -webkit-transition: 0.3s cubic-bezier(0.2, 0.6, 0.2, 1);
+  transition: 0.3s cubic-bezier(0.2, 0.6, 0.2, 1);
+}
+
+.contact p::before {
+  content: "hoangnguyen.hn212.hn@gmail.com";
+}
+
+.contact p:hover {
+  margin-left: 1rem;
+}
+
+.contact p:hover::before {
+  content: "Copy email to clipboard";
+}
+
+.contact p:active::before {
+  content: "Email copied";
 }
 /*# sourceMappingURL=main.css.map */
