@@ -207,19 +207,6 @@ h1 {
   left: -1.3rem;
 }
 
-@media (max-width: 1200px) {
-  .works .container {
-    width: 100%;
-    -ms-grid-rows: (1fr)[12];
-    -ms-grid-columns: 1fr;
-        grid-template: repeat(12, 1fr)/1fr;
-    height: 240vh;
-    padding: 0 2rem;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-  }
-}
-
 .contact section {
   color: #2980b9;
 }
@@ -245,5 +232,18 @@ h1 {
 
 .contact p:active::before {
   content: "Email copied";
+}
+
+@media (max-width: 1200px) {
+  .works .container {
+    width: 100%;
+    -ms-grid-rows: (1fr)[12];
+    -ms-grid-columns: 1fr;
+        grid-template: repeat(12, 1fr)/1fr;
+    height: 240vh;
+    padding: 0 2rem;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
 }
 /*# sourceMappingURL=main.css.map */
