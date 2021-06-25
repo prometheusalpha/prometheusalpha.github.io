@@ -218,11 +218,16 @@ h1 {
   transition: 0.3s cubic-bezier(0.2, 0.6, 0.2, 1);
 }
 
+.contact a {
+  -webkit-transition: 0.3s cubic-bezier(0.2, 0.6, 0.2, 1);
+  transition: 0.3s cubic-bezier(0.2, 0.6, 0.2, 1);
+}
+
 .contact p::before {
   content: "hoangnguyen.hn212.hn@gmail.com";
 }
 
-.contact p:hover {
+.contact p:hover, .contact a:hover {
   margin-left: 1rem;
 }
 
