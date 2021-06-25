@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   background: #000;
   color: #fff;
 }
@@ -84,7 +84,7 @@ h1 {
 .about .portrait {
   width: 100vw;
   height: 50vw;
-  background-image: url("../Image/portrait.jpg");
+  background-image: url(../image/portrait.jpg);
   background-size: cover;
   background-position: center;
 }
@@ -171,7 +171,7 @@ h1 {
 }
 
 .webdev {
-  background: url("../Image/webdev.png");
+  background: url("../image/webdev.jpg");
 }
 
 .webdev:hover > p {
@@ -180,7 +180,7 @@ h1 {
 }
 
 .csstrick {
-  background: url("../Image/csst.png");
+  background: url("../image/csst.png");
 }
 
 .csstrick:hover > p {
@@ -189,7 +189,7 @@ h1 {
 }
 
 .data {
-  background: url("../Image/crawl.png");
+  background: url("../image/crawl.png");
 }
 
 .data:hover > p {
@@ -198,7 +198,7 @@ h1 {
 }
 
 .manggon {
-  background: url("../Image/manggon.png");
+  background: url("../image/manggon.jpg");
 }
 
 .manggon:hover > p {
