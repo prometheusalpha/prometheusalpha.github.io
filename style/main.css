@@ -27,13 +27,19 @@ html {
   margin: auto;
 }
 
-h1 {
+h1, h2 {
+  font-family: Inter-bold;
   font-size: 4rem;
 }
 
 @font-face {
   font-family: Inters;
-  src: url("font/Inter-VariableFont_slnt,wght.ttf");
+  src: url("../font/Inter-Regular.ttf");
+}
+
+@font-face {
+  font-family: Inter-bold;
+  src: url("../font/Inter-Bold.ttf");
 }
 
 .home {
@@ -129,15 +135,18 @@ h1 {
   background-size: cover;
   border-radius: 1rem;
   position: relative;
-  -webkit-filter: grayscale(1) brightness(0.8);
-          filter: grayscale(1) brightness(0.8);
+}
+
+.works section div img {
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
   -webkit-transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.works section div:hover {
-  -webkit-filter: grayscale(0);
-          filter: grayscale(0);
+.works section div:hover img {
+  -webkit-filter: grayscale(0) brightness(0.5);
+          filter: grayscale(0) brightness(0.5);
 }
 
 .works section div p {
@@ -154,6 +163,14 @@ h1 {
   display: -ms-grid;
   display: grid;
   margin: auto;
+}
+
+.container div {
+  overflow: hidden;
+}
+
+.container img {
+  height: 100%;
 }
 
 .sm {
@@ -180,40 +197,24 @@ h1 {
   right: 0;
 }
 
-.webdev {
-  background: url("../image/webdev.jpg");
-}
-
 .webdev:hover > p {
   opacity: 1;
-  right: -1.3rem;
-}
-
-.csstrick {
-  background: url("../image/csst.png");
+  right: .3rem;
 }
 
 .csstrick:hover > p {
   opacity: 1;
-  left: -1.3rem;
-}
-
-.data {
-  background: url("../image/crawl.png");
+  left: .3rem;
 }
 
 .data:hover > p {
   opacity: 1;
-  right: -1.3rem;
-}
-
-.manggon {
-  background: url("../image/manggon.jpg");
+  right: .3rem;
 }
 
 .manggon:hover > p {
   opacity: 1;
-  left: -1.3rem;
+  left: .3rem;
 }
 
 .contact section {

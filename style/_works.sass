@@ -10,10 +10,11 @@ $transition: cubic-bezier(0.175, 0.885, 0.32, 1.275)
             background-size: cover
             border-radius: 1rem
             position: relative
-            filter: grayscale(1)  brightness(0.8)
-            transition: .5s $transition
-            &:hover
-                filter: grayscale(0)
+            img
+                filter: grayscale(1)
+                transition: .5s $transition
+            &:hover img
+                filter: grayscale(0) brightness(0.5)
             p
                 font-size: 1rem
                 position: absolute
@@ -25,10 +26,15 @@ $transition: cubic-bezier(0.175, 0.885, 0.32, 1.275)
     width: 100%
     display: grid
     margin: auto
+    div
+        overflow: hidden
+    img
+        height: 100%
 .sm
     grid-area: span 2 / span 1
 .xl
     grid-area: span 4 / span 1
+    
 .left
     transform: rotate(-90deg)
     transform-origin: 0 0
@@ -39,22 +45,18 @@ $transition: cubic-bezier(0.175, 0.885, 0.32, 1.275)
     right: 0
 
 .webdev
-    background: url("../image/webdev.jpg")
     &:hover > p
         opacity: 1
-        right: -1.3rem
+        right: .3rem
 .csstrick
-    background: url("../image/csst.png")
     &:hover > p
         opacity: 1
-        left: -1.3rem
+        left: .3rem
 .data
-    background: url("../image/crawl.png")
     &:hover > p
         opacity: 1
-        right: -1.3rem
+        right: .3rem
 .manggon
-    background: url("../image/manggon.jpg")
     &:hover > p
         opacity: 1
-        left: -1.3rem
+        left: .3rem
