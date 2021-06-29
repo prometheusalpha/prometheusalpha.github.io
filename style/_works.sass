@@ -1,62 +1,56 @@
-$transition: cubic-bezier(0.175, 0.885, 0.32, 1.275)
-.works
-    h1
-        font-size: 4rem
-    section
-        height: 120vh
-        grid-gap: 1rem
-        grid-template: repeat(6,1fr) / 1fr 1fr
-        div
-            background-size: cover
-            border-radius: 1rem
-            position: relative
-            img
-                filter: grayscale(1)
-                transition: .5s $transition
-            &:hover img
-                filter: grayscale(0) brightness(0.5)
-            p
-                font-size: 1rem
-                position: absolute
-                opacity: 0
-                transition: .5s $transition
-                bottom: -1rem
+.works__title
+  font-size: 4rem
+.works__container
+  height: 120vh
+  gap: 1rem
+  grid-template: repeat(6,1fr) / 1fr 1fr
+  width: 100%
+  display: grid
+  margin: auto
+  div
+    background-size: cover
+    border-radius: 1rem
+    position: relative
+    overflow: hidden
+    &:hover img
+      filter: grayscale(0) brightness(0.5)
+  img
+    filter: grayscale(1)
+    height: 100%
+    min-width: 100%
+  p
+    font-size: 1rem
+    position: absolute
+    opacity: 0
+    bottom: -1rem
 
-.container
-    width: 100%
-    display: grid
-    margin: auto
-    div
-        overflow: hidden
-    img
-        height: 100%
 .sm
-    grid-area: span 2 / span 1
+  grid-area: span 2 / span 1
 .xl
-    grid-area: span 4 / span 1
-    
+  grid-area: span 4 / span 1
+
 .left
-    transform: rotate(-90deg)
-    transform-origin: 0 0
-    left: -1rem
+  transform: rotate(-90deg)
+  transform-origin: 0 0
+  left: -1rem
 .right
-    transform: rotate(90deg)
-    transform-origin: 100% 0
-    right: 0
+  transform: rotate(90deg)
+  transform-origin: 100% 0
+  right: 0
 
 .webdev
-    &:hover > p
-        opacity: 1
-        right: .3rem
+  &:hover > p
+    opacity: 1
+    right: .3rem
 .csstrick
-    &:hover > p
-        opacity: 1
-        left: .3rem
+  &:hover > p
+    opacity: 1
+    left: .3rem
 .data
-    &:hover > p
-        opacity: 1
-        right: .3rem
+  &:hover > p
+    opacity: 1
+    right: .3rem
 .manggon
-    &:hover > p
-        opacity: 1
-        left: .3rem
+  &:hover > p
+    opacity: 1
+    left: .3rem

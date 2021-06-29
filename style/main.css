@@ -9,6 +9,8 @@ body {
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  -webkit-transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 a {
@@ -35,11 +37,13 @@ h1, h2 {
 @font-face {
   font-family: Inters;
   src: url("../font/Inter-Regular.ttf");
+  font-display: swap;
 }
 
 @font-face {
   font-family: Inter-bold;
   src: url("../font/Inter-Bold.ttf");
+  font-display: swap;
 }
 
 .home {
@@ -80,6 +84,8 @@ h1, h2 {
 .logo {
   z-index: 99;
   position: fixed;
+  width: 100px;
+  height: 100px;
   right: 8vw;
   top: 4rem;
 }
@@ -119,58 +125,46 @@ h1, h2 {
   margin: auto;
 }
 
-.works h1 {
+.works__title {
   font-size: 4rem;
 }
 
-.works section {
+.works__container {
   height: 120vh;
-  grid-gap: 1rem;
+  gap: 1rem;
   -ms-grid-rows: (1fr)[6];
   -ms-grid-columns: 1fr 1fr;
       grid-template: repeat(6, 1fr)/1fr 1fr;
-}
-
-.works section div {
-  background-size: cover;
-  border-radius: 1rem;
-  position: relative;
-}
-
-.works section div img {
-  -webkit-filter: grayscale(1);
-          filter: grayscale(1);
-  -webkit-transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.works section div:hover img {
-  -webkit-filter: grayscale(0) brightness(0.5);
-          filter: grayscale(0) brightness(0.5);
-}
-
-.works section div p {
-  font-size: 1rem;
-  position: absolute;
-  opacity: 0;
-  -webkit-transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  bottom: -1rem;
-}
-
-.container {
   width: 100%;
   display: -ms-grid;
   display: grid;
   margin: auto;
 }
 
-.container div {
+.works__container div {
+  background-size: cover;
+  border-radius: 1rem;
+  position: relative;
   overflow: hidden;
 }
 
-.container img {
+.works__container div:hover img {
+  -webkit-filter: grayscale(0) brightness(0.5);
+          filter: grayscale(0) brightness(0.5);
+}
+
+.works__container img {
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
   height: 100%;
+  min-width: 100%;
+}
+
+.works__container p {
+  font-size: 1rem;
+  position: absolute;
+  opacity: 0;
+  bottom: -1rem;
 }
 
 .sm {
@@ -221,36 +215,36 @@ h1, h2 {
   color: #2980b9;
 }
 
-.contact p {
+.contact section p {
   cursor: pointer;
   margin: 0;
   -webkit-transition: 0.3s cubic-bezier(0.2, 0.6, 0.2, 1);
   transition: 0.3s cubic-bezier(0.2, 0.6, 0.2, 1);
 }
 
-.contact a {
+.contact section a {
   -webkit-transition: 0.3s cubic-bezier(0.2, 0.6, 0.2, 1);
   transition: 0.3s cubic-bezier(0.2, 0.6, 0.2, 1);
 }
 
-.contact p::before {
+.contact section p::before {
   content: "hoangnguyen.hn212.hn@gmail.com";
 }
 
-.contact p:hover, .contact a:hover {
-  margin-left: 1rem;
+.contact section p:hover, .contact section a:hover {
+  padding-left: 1rem;
 }
 
-.contact p:hover::before {
+.contact section p:hover::before {
   content: "Copy email to clipboard";
 }
 
-.contact p:active::before {
+.contact section p:active::before {
   content: "Email copied";
 }
 
 @media (max-width: 1200px) {
-  .works .container {
+  .works .works__container {
     width: 100%;
     -ms-grid-rows: (1fr)[12];
     -ms-grid-columns: 1fr;
