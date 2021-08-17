@@ -6,9 +6,16 @@ body
   font-family: Inter, sans-serif
   background: #000
   color: #fff
+
+#bg
+  position: fixed
+  width: 100%
+  z-index: -9
+  filter: brightness(0.4)
+
 *
   box-sizing: border-box
-  transition: .5s $transition
+  transition: .2s $transition
 a
   text-decoration: none
   color: inherit
@@ -20,7 +27,6 @@ html
   padding: 10rem 1rem 0 1rem
   margin: auto
 h1,h2
-  font-family: Inter
   font-weight: 700
   font-size: 4rem
 
