@@ -1,0 +1,17 @@
+@media (max-width: 1200px) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  .works {
+    .works__container {
+      width: 100%;
+      grid-template: repeat(12, 1fr) / 1fr;
+      height: 240vh;
+      padding: 0 2rem;
+      box-sizing: border-box;
+    }
+  }
+}
+
+;

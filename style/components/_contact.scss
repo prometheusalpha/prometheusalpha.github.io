@@ -1,0 +1,32 @@
+.contact {
+  section {
+    color: #2980b9;
+
+    p {
+      cursor: pointer;
+      margin: 0;
+      transition: .3s cubic-bezier(0.2, 0.6, 0.2, 1);
+    }
+
+    a {
+      transition: .3s cubic-bezier(0.2, 0.6, 0.2, 1);
+    }
+
+    p::before {
+      content: "hoangnguyen.hn212.hn@gmail.com";
+    }
+
+    p:hover,
+    a:hover {
+      padding-left: 1rem;
+    }
+
+    p:hover::before {
+      content: "Copy email to clipboard";
+    }
+
+    p:active::before {
+      content: "Email copied";
+    }
+  }
+}
