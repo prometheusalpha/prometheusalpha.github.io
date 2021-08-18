@@ -11,7 +11,7 @@ class TxtType {
     this.isDeleting = false;
     this.tick();
   }
-  tick() {
+  tick = () => {
     var i = this.loopNum % this.alternating_words.length;
     var fullTxt = this.alternating_words[i];
 
@@ -35,17 +35,17 @@ class TxtType {
       this.isDeleting = true;
     } else if (this.isDeleting && this.txt === "") {
       this.isDeleting = false;
-      this.loopNum++;
+      this.loopNum++; 
       delta = 500;
     }
 
-    setTimeout(function () {
+    setTimeout(() => {
       that.tick();
     }, delta);
   }
 }
 
-window.onload = function () {
+window.onload = () => {
   var element = document.querySelector("#typewrite");
   var alternating_words = element.getAttribute("data-type");
   if (alternating_words) {
