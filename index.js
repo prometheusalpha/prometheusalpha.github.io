@@ -12,8 +12,8 @@ class TxtType {
     this.tick();
   }
   tick = () => {
-    var i = this.loopNum % this.alternating_words.length;
-    var fullTxt = this.alternating_words[i];
+    this.loopNum = this.loopNum % this.alternating_words.length;
+    var fullTxt = this.alternating_words[this.loopNum];
 
     if (this.isDeleting) {
       this.txt = fullTxt.substring(0, this.txt.length - 1);
@@ -35,7 +35,7 @@ class TxtType {
       this.isDeleting = true;
     } else if (this.isDeleting && this.txt === "") {
       this.isDeleting = false;
-      this.loopNum++; 
+      this.loopNum++;
       delta = 500;
     }
 

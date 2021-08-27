@@ -3,83 +3,84 @@
 }
 
 .works__container {
-  height: 120vh;
-  gap: 1rem;
-  grid-template: repeat(6, 1fr) / 1fr 1fr;
-  width: 100%;
+  grid-template:
+    "a a"
+    "b c"
+    "d d";
+  // width: 100%;
   display: grid;
   margin: auto;
 
-  div {
-    background-size: cover;
-    border-radius: 1rem;
+  .works__rectangle {
     position: relative;
     overflow: hidden;
+    min-height: 500px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 
-    &:hover img {
-      filter: grayscale(0) brightness(0.5);
+    .line {
+      margin: auto;
+      width: 3rem;
+      height: 2px;
+      background: #fff;
+      margin-top: 2rem;
     }
-  }
 
-  img {
-    filter: grayscale(1);
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-  }
+    h2 {
+      font-size: 2rem;
+      margin: 1rem;
+    }
 
-  p {
-    font-size: 1rem;
-    position: absolute;
-    opacity: 0;
-    bottom: -1rem;
+    &:hover {
+      .work__name {
+        transform: translateY(-.5rem);
+      }
+
+      .work__desc {
+        transform: translateY(.5rem);
+
+        .line {
+          width: 4rem;
+        }
+      }
+
+      .work__header {
+        transform: scaleY(1);
+      }
+
+    }
+
+    .work__header {
+      position: absolute;
+      right: 1rem;
+      top: 0;
+      font-size: .8rem;
+      padding: 1rem;
+      background: #000;
+      transform: scaleY(0);
+      transform-origin: 0% 0%;
+    }
   }
 }
 
 .sm {
-  grid-area: span 2 / span 1;
+  grid-area: span 1 / span 1;
 }
 
 .xl {
-  grid-area: span 4 / span 1;
+  grid-area: span 1 / span 2;
 }
 
-.left {
-  transform: rotate(-90deg);
-  transform-origin: 0 0;
-  left: -1rem;
+.greenworld {
+  background: #334756;
 }
 
-.right {
-  transform: rotate(90deg);
-  transform-origin: 100% 0;
-  right: 0;
+.sortvisualizer {
+  background: #082032;
 }
 
-.webdev {
-  &:hover>p {
-    opacity: 1;
-    right: .3rem;
-  }
-}
-
-.csstrick {
-  &:hover>p {
-    opacity: 1;
-    left: .3rem;
-  }
-}
-
-.data {
-  &:hover>p {
-    opacity: 1;
-    right: .3rem;
-  }
-}
-
-.manggon {
-  &:hover>p {
-    opacity: 1;
-    left: .3rem;
-  }
+.new {
+  background: #CDBBA7;
 }

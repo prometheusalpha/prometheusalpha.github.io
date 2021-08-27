@@ -10,14 +10,15 @@ body {
 
 #bg {
   position: fixed;
-  width: 100%;
+  min-width: 100%;
+  object-fit: cover;
   z-index: -9;
   filter: brightness(0.4);
 }
 
 * {
   box-sizing: border-box;
-  transition: .2s $transition;
+  transition: .3s $transition;
 }
 
 a {
@@ -26,7 +27,7 @@ a {
 }
 
 html {
-  font-size: clamp(16px, 3vw, 24px);
+  font-size: clamp(14px, 3vw, 22px);
 }
 
 .max-width {
@@ -38,6 +39,7 @@ html {
 
 h1,
 h2 {
+  line-height: 1.1;
   font-weight: 700;
   font-size: 4rem;
 }

@@ -31,8 +31,31 @@
   position: fixed;
   right: 8vw;
   top: 4rem;
+  mix-blend-mode: difference;
+
   img {
     width: 100px;
     height: 100px;
+  }
+
+  a {
+    z-index: 99;
+  }
+
+  a::before {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+
+  a:hover::before {
+    transform: scaleX(1);
   }
 }
