@@ -6,17 +6,6 @@ body {
   color: #fff;
 }
 
-.bg {
-  background: url(../image/bg1.jpg);
-  background-position: center;
-  background-size: cover;
-  position: fixed;
-  inset: 0;
-  z-index: -11;
-  -webkit-filter: brightness(0.6) contrast(0.9) saturate(0.7);
-          filter: brightness(0.6) contrast(0.9) saturate(0.7);
-}
-
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -45,6 +34,24 @@ h2 {
   line-height: 1.1;
   font-weight: 800;
   font-size: 4rem;
+}
+
+.bg {
+  background: url(../image/bg1.jpg);
+  background-position: center;
+  background-size: cover;
+  position: fixed;
+  inset: 0;
+  z-index: -11;
+  -webkit-filter: brightness(0.6) contrast(0.9) saturate(0.7);
+          filter: brightness(0.6) contrast(0.9) saturate(0.7);
+}
+
+.section-title {
+  font-size: 4rem;
+  margin: 0 0 -1.2rem 1rem;
+  position: relative;
+  z-index: 9;
 }
 
 .home {
@@ -125,7 +132,7 @@ h2 {
 }
 
 .about .portrait {
-  margin-left: -1rem;
+  margin-left: -1.5rem;
   width: 100vw;
   height: 45vw;
   overflow: hidden;
@@ -145,12 +152,6 @@ h2 {
   max-width: 30rem;
   padding-right: 1rem;
   margin: 3rem auto;
-}
-
-.section-title {
-  font-size: 4rem;
-  margin: 0 0 -1rem 0;
-  z-index: 9;
 }
 
 .works__container {
@@ -176,14 +177,7 @@ h2 {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   background-size: cover;
-}
-
-.works__container .works__rectangle .line {
-  margin: auto;
-  width: 3rem;
-  height: 2px;
-  background: #fff;
-  margin-top: 2rem;
+  overflow: hidden;
 }
 
 .works__container .works__rectangle h2 {
@@ -210,6 +204,11 @@ h2 {
           transform: scaleY(1);
 }
 
+.works__container .works__rectangle:hover .work__bg {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
 .works__container .works__rectangle .work__header {
   position: absolute;
   right: 1rem;
@@ -223,10 +222,12 @@ h2 {
           transform-origin: 0% 0%;
 }
 
-.works__container .works__rectangle .work__bg {
-  -o-object-fit: cover;
-     object-fit: cover;
-  z-index: 0;
+.line {
+  margin: auto;
+  width: 3rem;
+  height: 2px;
+  background: #fff;
+  margin-top: 2rem;
 }
 
 .sm {
@@ -246,47 +247,82 @@ h2 {
   z-index: -1;
   -webkit-filter: brightness(0.8) contrast(0.6);
           filter: brightness(0.8) contrast(0.6);
+  -webkit-transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 .sortvisualizer {
-  background: #082032;
+  background: #d7e0e5;
+}
+
+.sortvisualizer h2,
+.sortvisualizer p {
+  color: #334756;
+}
+
+.sortvisualizer .line {
+  background: #334756;
+}
+
+.sortvisualizer__bg {
+  background-image: url(../image/sort-visualizer.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center 400px;
+  position: absolute;
+  inset: 0;
+  -webkit-transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 .new {
   background: #CDBBA7;
 }
 
-.contact section {
-  color: #2980b9;
+.contact__menu {
+  height: 50vmin;
+  color: #ecf0f1;
+  background: #334756;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 2rem;
 }
 
-.contact section p {
+.contact__menu p {
   cursor: pointer;
   margin: 0;
   -webkit-transition: 0.3s cubic-bezier(0.2, 0.6, 0.2, 1);
   transition: 0.3s cubic-bezier(0.2, 0.6, 0.2, 1);
 }
 
-.contact section a {
+.contact__menu p::before {
+  content: "hoangnguyen.hn212.hn@gmail.com";
+}
+
+.contact__menu p:hover::before {
+  content: "Copy email to clipboard";
+}
+
+.contact__menu p:active::before {
+  content: "Email copied";
+}
+
+.contact__menu a {
   -webkit-transition: 0.3s cubic-bezier(0.2, 0.6, 0.2, 1);
   transition: 0.3s cubic-bezier(0.2, 0.6, 0.2, 1);
 }
 
-.contact section p::before {
-  content: "hoangnguyen.hn212.hn@gmail.com";
-}
-
-.contact section p:hover,
-.contact section a:hover {
+.contact__menu p:hover,
+.contact__menu a:hover {
   padding-left: 1rem;
-}
-
-.contact section p:hover::before {
-  content: "Copy email to clipboard";
-}
-
-.contact section p:active::before {
-  content: "Email copied";
 }
 
 @media (max-width: 900px) {
@@ -294,7 +330,6 @@ h2 {
     font-size: 3rem !important;
   }
   .works .works__container {
-    width: 100%;
     grid-template: "a" "b" "c" "d";
   }
   .works .works__container .sm,

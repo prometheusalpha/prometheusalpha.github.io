@@ -1,19 +1,33 @@
 .contact {
-  section {
-    color: #2980b9;
+  &__menu {
+    height: 50vmin;
+    color: #ecf0f1;
+    background: #334756;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 2rem;
 
     p {
       cursor: pointer;
       margin: 0;
       transition: .3s cubic-bezier(0.2, 0.6, 0.2, 1);
+
+      &::before {
+        content: "hoangnguyen.hn212.hn@gmail.com";
+      }
+
+      &:hover::before {
+        content: "Copy email to clipboard";
+      }
+
+      &:active::before {
+        content: "Email copied";
+      }
     }
 
     a {
       transition: .3s cubic-bezier(0.2, 0.6, 0.2, 1);
-    }
-
-    p::before {
-      content: "hoangnguyen.hn212.hn@gmail.com";
     }
 
     p:hover,
@@ -21,12 +35,5 @@
       padding-left: 1rem;
     }
 
-    p:hover::before {
-      content: "Copy email to clipboard";
-    }
-
-    p:active::before {
-      content: "Email copied";
-    }
   }
 }

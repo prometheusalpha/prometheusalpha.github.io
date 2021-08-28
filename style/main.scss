@@ -8,16 +8,6 @@ body {
   color: #fff;
 }
 
-.bg {
-  background: url(../image/bg1.jpg);
-  background-position: center;
-  background-size: cover;
-  position: fixed;
-  inset: 0;
-  z-index: -11;
-  filter: brightness(.6) contrast(.9) saturate(.7);
-}
-
 * {
   box-sizing: border-box;
   transition: .3s $transition;
@@ -44,6 +34,24 @@ h2 {
   line-height: 1.1;
   font-weight: 800;
   font-size: 4rem;
+}
+
+.bg {
+  background: url(../image/bg1.jpg);
+  background-position: center;
+  background-size: cover;
+  position: fixed;
+  inset: 0;
+  z-index: -11;
+  filter: brightness(.6) contrast(.9) saturate(.7);
+}
+
+
+.section-title {
+  font-size: 4rem;
+  margin: 0 0 -1.2rem 1rem;
+  position: relative;
+  z-index: 9;
 }
 
 @import "components/home";
