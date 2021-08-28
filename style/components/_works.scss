@@ -1,5 +1,7 @@
-.works__title {
+.section-title {
   font-size: 4rem;
+  margin: 0 0 -1rem 0;
+  z-index: 9;
 }
 
 .works__container {
@@ -7,18 +9,18 @@
     "a a"
     "b c"
     "d d";
-  // width: 100%;
   display: grid;
   margin: auto;
 
   .works__rectangle {
     position: relative;
-    overflow: hidden;
     min-height: 500px;
+    padding: 1rem;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    background-size: cover;
 
     .line {
       margin: auto;
@@ -62,6 +64,11 @@
       transform: scaleY(0);
       transform-origin: 0% 0%;
     }
+
+    .work__bg {
+      object-fit: cover;
+      z-index: 0;
+    }
   }
 }
 
@@ -74,7 +81,15 @@
 }
 
 .greenworld {
-  background: #334756;
+  &__bg {
+    background-image: url(../image/GreenWorld.webp);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    filter: brightness(.8) contrast(.6);
+  }
 }
 
 .sortvisualizer {

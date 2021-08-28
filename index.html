@@ -6,15 +6,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hoang</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style/main.css" />
+
+  <link rel="preload" as="image" href="image/GreenWorld.webp">
+
   <script src="index.js" defer async type="module"></script>
 </head>
 
 <body>
-  <img src="image/bg.jpg" id="bg" alt="">
+  <div class="bg">
+  </div>
   <section class="logo">
     <a href="">hoang</a>
   </section>
@@ -31,12 +36,11 @@
   </section>
   <section class="about">
     <div class="max-width">
-      <h1>I solve problems.</h1>
+      <h1 class="section-title">I solve problems.</h1>
       <div class="portrait">
-        <img src="image/portrait.jpg" alt="" loading="lazy" />
+        <img src="image/portrait.jpg" alt="My portrait" loading="lazy" />
       </div>
       <div class="about__description">
-        <!-- <h2>About</h2> -->
         <b>Hi, I am Hoang</b><br /><br />
         An 18 years old software engineering student. I love to design and
         make things. I love frontend coding and reading books.
@@ -56,9 +60,11 @@
   </section>
   <section class="works">
     <div class="max-width">
-      <h1 class="works__title">I build projects.</h1>
+      <h1 class="section-title">I build projects.</h1>
       <section class="works__container">
-        <a href="/GreenWorld" class="greenworld xl works__rectangle">
+        <a href="https://prometheusalpha.github.io/GreenWorld/" target="_blank" rel="noopener noreferrer"
+          class="greenworld xl works__rectangle">
+          <div class="greenworld__bg"></div>
           <div class="work__header">View project</div>
           <h2 class="work__name">Green World</h2>
           <div class="work__desc">
@@ -66,7 +72,8 @@
             <p>A project about environmental protection</p>
           </div>
         </a>
-        <a href="/Sort-Visualizer" class="sortvisualizer sm works__rectangle">
+        <a href="https://prometheusalpha.github.io/Sort-Visualizer/" target="_blank" rel="noopener noreferrer"
+          class="sortvisualizer sm works__rectangle">
           <div class="work__header">View project</div>
           <h2 class="work__name">Sort Visualizer</h2>
           <div class="work__desc">
@@ -74,7 +81,7 @@
             <p>A project that helps to understand sorting algorithms</p>
           </div>
         </a>
-        <a href="" class="new sm works__rectangle">
+        <a href="" target="_blank" rel="noopener noreferrer" class="new sm works__rectangle">
           <div class="work__header">View project</div>
           <h2 class="work__name">Lorem ipsum</h2>
           <div class="work__desc">
@@ -82,12 +89,10 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, necessitatibus?</p>
           </div>
         </a>
-        <!-- <div class="xl works__rectangle">
-        </div> -->
       </section>
     </div>
   </section>
-  <div class="contact">
+  <section class="contact">
     <div class="max-width">
       <h1>Contact</h1>
       <section>
@@ -100,7 +105,7 @@
           rel="noopener noreferrer">LinkedIn</a><br /><br />
       </section>
     </div>
-  </div>
+  </section>
 </body>
 
 </html>
