@@ -5,22 +5,24 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="image/favicon.png" />
   <title>Hoang</title>
 
+  <link rel="preconnect" href="style/main.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="image" href="image/GreenWorld.webp">
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style/main.css" />
 
-  <link rel="preload" as="image" href="image/GreenWorld.webp">
-
-  <script src="index.js" defer async type="module"></script>
+  <script src="scripts/index.js" defer async type="module"></script>
 </head>
 
 <body>
   <div class="bg fixed full_parent">
   </div>
-  <section class="logo fixed">
+  <section class="logo fixed z-99">
     <a href="">hoang</a>
   </section>
   <section class="home relative">
@@ -36,9 +38,8 @@
   </section>
   <section class="about">
     <div class="max-width">
-      <h1 class="section-title relative">I solve problems.</h1>
+      <h1 class="section-title z-99 relative">I solve problems.</h1>
       <div class="portrait">
-        <img src="image/portrait.jpg" alt="My portrait" loading="lazy" />
       </div>
       <div class="about__description">
         <b>Hi, I am Hoang</b><br /><br />
@@ -60,14 +61,14 @@
   </section>
   <section class="works">
     <div class="max-width">
-      <h1 class="section-title relative">I build projects.</h1>
+      <h1 class="section-title z-99 relative">I build projects.</h1>
       <section class="works__container">
         <a href="https://prometheusalpha.github.io/GreenWorld/" target="_blank" rel="noopener noreferrer"
           class="greenworld xl works__rectangle relative flex flex-column">
           <div class="greenworld__bg work__bg absolute full_parent"></div>
           <div class="work__header absolute">View project</div>
-          <h2 class="work__name">Green World</h2>
-          <div class="work__desc">
+          <h2 class="work__name z-1">Green World</h2>
+          <div class="work__desc z-1">
             <div class="line"></div>
             <p>A project about environmental protection</p>
           </div>
@@ -76,18 +77,18 @@
           class="sortvisualizer sm works__rectangle relative flex flex-column">
           <div class="sortvisualizer__bg work__bg absolute full_parent"></div>
           <div class="work__header absolute">View project</div>
-          <h2 class="work__name">Sort Visualizer</h2>
-          <div class="work__desc">
+          <h2 class="work__name z-1">Sort Visualizer</h2>
+          <div class="work__desc z-1">
             <div class="line"></div>
             <p>A project that helps to understand sorting algorithms</p>
           </div>
         </a>
         <a href="" target="_blank" rel="noopener noreferrer" class="new sm works__rectangle relative flex flex-column">
-          <div class="work__header absolute">View project</div>
-          <h2 class="work__name">Lorem ipsum</h2>
-          <div class="work__desc">
+          <!-- <div class="work__header absolute">View project</div> -->
+          <h2 class="work__name z-1">Coming soon...</h2>
+          <div class="work__desc z-1">
             <div class="line"></div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, necessitatibus?</p>
+            <p>In progress...</p>
           </div>
         </a>
       </section>
@@ -95,14 +96,14 @@
   </section>
   <section class="contact">
     <div class="max-width">
-      <h1 class="section-title relative">Contact</h1>
+      <h1 class="section-title z-99 relative">Contact</h1>
       <section class="contact__menu flex flex-column">
         <p id="email"></p>
-        <a href="https://www.facebook.com/prometheux2/" target="_blank"
-          rel="noopener noreferrer">Facebook</a>
-        <a href="https://github.com/PrometheusAlpha" target="_blank" rel="noopener noreferrer">Github</a>
-        <a href="https://www.linkedin.com/in/prometheusalpha/" target="_blank"
-          rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://www.facebook.com/prometheux2/" target="_blank" rel="noopener noreferrer"
+          class="facebook">Facebook</a>
+        <a href="https://github.com/PrometheusAlpha" target="_blank" rel="noopener noreferrer" class="github">Github</a>
+        <a href="https://www.linkedin.com/in/prometheusalpha/" target="_blank" rel="noopener noreferrer"
+          class="linkedin">LinkedIn</a>
       </section>
     </div>
   </section>
