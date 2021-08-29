@@ -18,14 +18,14 @@
 </head>
 
 <body>
-  <div class="bg">
+  <div class="bg fixed full_parent">
   </div>
-  <section class="logo">
+  <section class="logo fixed">
     <a href="">hoang</a>
   </section>
-  <section class="home">
+  <section class="home relative">
     <div class="max-width">
-      <article>
+      <article class="flex flex-column">
         <h1>Hello.</h1>
         <h1 class="blue">I am</h1>
         <h1 class="blue">
@@ -36,7 +36,7 @@
   </section>
   <section class="about">
     <div class="max-width">
-      <h1 class="section-title">I solve problems.</h1>
+      <h1 class="section-title relative">I solve problems.</h1>
       <div class="portrait">
         <img src="image/portrait.jpg" alt="My portrait" loading="lazy" />
       </div>
@@ -60,12 +60,12 @@
   </section>
   <section class="works">
     <div class="max-width">
-      <h1 class="section-title">I build projects.</h1>
+      <h1 class="section-title relative">I build projects.</h1>
       <section class="works__container">
         <a href="https://prometheusalpha.github.io/GreenWorld/" target="_blank" rel="noopener noreferrer"
-          class="greenworld xl works__rectangle">
-          <div class="greenworld__bg work__bg"></div>
-          <div class="work__header">View project</div>
+          class="greenworld xl works__rectangle relative flex flex-column">
+          <div class="greenworld__bg work__bg absolute full_parent"></div>
+          <div class="work__header absolute">View project</div>
           <h2 class="work__name">Green World</h2>
           <div class="work__desc">
             <div class="line"></div>
@@ -73,17 +73,17 @@
           </div>
         </a>
         <a href="https://prometheusalpha.github.io/Sort-Visualizer/" target="_blank" rel="noopener noreferrer"
-          class="sortvisualizer sm works__rectangle">
-          <div class="sortvisualizer__bg work__bg"></div>
-          <div class="work__header">View project</div>
+          class="sortvisualizer sm works__rectangle relative flex flex-column">
+          <div class="sortvisualizer__bg work__bg absolute full_parent"></div>
+          <div class="work__header absolute">View project</div>
           <h2 class="work__name">Sort Visualizer</h2>
           <div class="work__desc">
             <div class="line"></div>
             <p>A project that helps to understand sorting algorithms</p>
           </div>
         </a>
-        <a href="" target="_blank" rel="noopener noreferrer" class="new sm works__rectangle">
-          <div class="work__header">View project</div>
+        <a href="" target="_blank" rel="noopener noreferrer" class="new sm works__rectangle relative flex flex-column">
+          <div class="work__header absolute">View project</div>
           <h2 class="work__name">Lorem ipsum</h2>
           <div class="work__desc">
             <div class="line"></div>
@@ -95,8 +95,8 @@
   </section>
   <section class="contact">
     <div class="max-width">
-      <h1 class="section-title">Contact</h1>
-      <section class="contact__menu">
+      <h1 class="section-title relative">Contact</h1>
+      <section class="contact__menu flex flex-column">
         <p id="email"></p>
         <a href="https://www.facebook.com/prometheux2/" target="_blank"
           rel="noopener noreferrer">Facebook</a>
