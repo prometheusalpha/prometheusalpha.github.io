@@ -20,7 +20,7 @@ a {
 }
 
 html {
-  font-size: clamp(14px, 3vw, 20px);
+  font-size: clamp(15px, 3vw, 17px);
 }
 
 .max-width {
@@ -162,7 +162,6 @@ h2 {
   margin-left: -1.5rem;
   width: 100vw;
   height: 40vw;
-  overflow: hidden;
   background-image: url(../image/portrait.jpg);
   background-size: cover;
   background-position: center;
@@ -199,6 +198,15 @@ h2 {
   overflow: hidden;
 }
 
+.works__rectangle--dark h2,
+.works__rectangle--dark p {
+  color: #334756;
+}
+
+.works__rectangle--dark .line {
+  background: #334756;
+}
+
 .works__rectangle .work__name {
   font-size: 2rem;
   margin: 1rem;
@@ -231,7 +239,7 @@ h2 {
 .work__header {
   right: 1rem;
   top: 0;
-  font-size: .8rem;
+  font-size: .7rem;
   padding: 1rem;
   background: #000;
   -webkit-transform: scaleY(0);
@@ -263,15 +271,6 @@ h2 {
   background: #d7e0e5;
 }
 
-.sortvisualizer h2,
-.sortvisualizer p {
-  color: #334756;
-}
-
-.sortvisualizer .line {
-  background: #334756;
-}
-
 .sortvisualizer__bg {
   background-image: url(../image/sort-visualizer.jpg);
   background-repeat: no-repeat;
@@ -286,7 +285,7 @@ h2 {
 }
 
 .contact__menu {
-  height: 50vh;
+  height: 20rem;
   color: #ecf0f1;
   background: #334756;
   -webkit-box-pack: space-evenly;
@@ -332,15 +331,6 @@ h2 {
 
 .linkedin:hover::after {
   content: " - Nguyễn Huy Hoàng";
-}
-
-@media (max-width: 1100px) {
-  .portrait {
-    margin-left: -1.5rem;
-    width: 100vw;
-    height: 40vw;
-    overflow: hidden;
-  }
 }
 
 @media (max-width: 900px) {
