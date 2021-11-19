@@ -1,0 +1,115 @@
+$transition: cubic-bezier(0.215, 0.61, 0.355, 1);
+
+.works__container {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  display: grid;
+  margin: auto;
+}
+
+.works__rectangle {
+  min-height: 500px;
+  padding: 1rem;
+  text-align: center;
+  justify-content: space-evenly;
+  background-size: cover;
+  overflow: hidden;
+
+  &--dark {
+
+    h2,
+    p {
+      color: #334756;
+    }
+
+    .line {
+      background: #334756;
+    }
+  }
+
+  .work__name {
+    font-size: 2rem;
+    margin: 1rem;
+  }
+
+  &:hover {
+    .work__name {
+      transform: translateY(-.3rem);
+    }
+
+    .work__desc {
+      transform: translateY(.3rem);
+
+      .line {
+        width: 4rem;
+      }
+    }
+
+    .work__header {
+      transform: scaleY(1);
+    }
+
+    .work__bg {
+      transform: scale(1.04);
+    }
+
+  }
+
+}
+
+
+.work__header {
+  right: 1rem;
+  top: 0;
+  font-size: .7rem;
+  padding: 1rem;
+  background: #000;
+  transform: scaleY(0);
+  transform-origin: 0% 0%;
+}
+
+.line {
+  margin: auto;
+  width: 3rem;
+  height: 2px;
+  background: #fff;
+  margin-top: 2rem;
+}
+
+.greenworld {
+  &__bg {
+    background-image: url(../image/GreenWorld.webp);
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+    filter: brightness(.8) contrast(.6);
+    transition: all .3s $transition;
+  }
+}
+
+.passgen {
+  &__bg {
+    background-image: url(../image/password.jpg);
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+    filter: brightness(.8) contrast(.7);
+    transition: all .3s $transition;
+  }
+}
+
+.sortvisualizer {
+  background: #d7e0e5;
+
+  &__bg {
+    background-image: url(../image/sort-visualizer.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center 400px;
+    transition: all .3s $transition;
+  }
+}
+
+.new {
+  background: #CDBBA7;
+}

@@ -1,0 +1,48 @@
+.contact {
+  &__menu {
+    height: 20rem;
+    color: #ecf0f1;
+    background: #334756;
+    justify-content: space-evenly;
+    padding: 0 2rem;
+
+    p {
+      cursor: pointer;
+      margin: 0;
+
+      &::before {
+        content: "hoangnguyen.hn212.hn@gmail.com";
+      }
+
+      &:hover::before {
+        content: "Copy email to clipboard";
+      }
+
+      &:active::before {
+        content: "Email copied";
+      }
+    }
+
+    a {
+      transition: .3s cubic-bezier(0.2, 0.6, 0.2, 1);
+    }
+
+    p:hover,
+    a:hover {
+      padding-left: 1rem;
+    }
+
+  }
+}
+
+.facebook:hover::after{
+  content: " - Nguyễn Huy Hoàng";
+}
+
+.github:hover::after{
+  content: " - Prometheus Alpha";
+}
+
+.linkedin:hover::after{
+  content: " - Nguyễn Huy Hoàng";
+}

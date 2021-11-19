@@ -1,0 +1,22 @@
+@media (max-width: 900px) {
+  h1 {
+    font-size: 3rem !important;
+  }
+
+  .works {
+    .works__container {
+      grid-template:
+        "a"
+        "b"
+        "c"
+        "d";
+
+      .sm,
+      .xl {
+        grid-area: span 1 / span 1;
+      }
+    }
+  }
+}
+
+;
