@@ -267,6 +267,17 @@ h2 {
   transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
+.passgen__bg {
+  background-image: url(../image/password.jpg);
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+  -webkit-filter: brightness(0.8) contrast(0.7);
+          filter: brightness(0.8) contrast(0.7);
+  -webkit-transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+  transition: all 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
 .sortvisualizer {
   background: #d7e0e5;
 }
