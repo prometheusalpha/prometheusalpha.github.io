@@ -16,108 +16,122 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style/main.css" />
 
+  <script src="https://cdn.tailwindcss.com"></script>
   <script src="scripts/index.js" defer async type="module"></script>
 </head>
 
-<body>
-  <div class="bg fixed full_parent">
-  </div>
-  <section class="logo fixed z-99">
-    <a href="https://prometheusalpha.github.io">hoang</a>
+<body class="bg-slate-900 text-white">
+  <section class="top-8 right-8 fixed z-10">
+    <a href="#">hoang</a>
   </section>
-  <section class="home relative">
-    <div class="max-width">
-      <article class="flex flex-column">
+  <section class="relative">
+    <div class="w-full h-screen md:pl-[24vw] pl-[10vw] flex flex-col pt-[30vh]">
+      <article class="flex flex-col text-5xl md:text-8xl font-bold">
         <h1>Hello.</h1>
-        <h1 class="blue">I am</h1>
-        <h1 class="blue">
+        <h1 class="text-blue-600">I am</h1>
+        <h1 class="text-blue-600">
           <p id="typewrite" data-type='[ "Hoàng.", "a developer."]'></p>
         </h1>
       </article>
     </div>
   </section>
-  <section class="about">
-    <div class="max-width">
-      <h1 class="section-title z-99 relative">I solve problems.</h1>
-      <div class="portrait">
-      </div>
-      <div class="about__description">
-        <b>Hi, I am Hoang</b><br /><br />
-        An 18 years old software engineering student. I love to design and
+
+  <div class="max-w-7xl mx-auto px-10">
+    <h1 class="text-7xl relative font-bold -mb-4 z-10">I build projects.</h1>
+    <section class="lg:grid grid-cols-2">
+      <a href="https://prometheusalpha.github.io/GreenWorld/" target="_blank" rel="noopener noreferrer"
+        class="aspect-square lg:aspect-[2/1] lg:col-span-2 relative flex group flex-col justify-evenly items-center overflow-hidden">
+        <div class="bg-[url('./image/GreenWorld.webp')] w-full h-full absolute bg-cover bg-center group-hover:scale-110
+            transition-all duration-300 ease-in-out shadow-[inset_0_0_0_2000px_rgba(0,0,0,0.3)]">
+        </div>
+        <div class="absolute -top-16 right-8 p-4 bg-slate-800 group-hover:top-0 transition-all duration-300">
+          View project</div>
+        <h2
+          class="z-1 text-5xl bottom-0 font-bold relative group-hover:bottom-4 transition-all duration-300 ease-in-out">
+          Green
+          World</h2>
+        <div class="z-1 lg:text-lg relative top-0 group-hover:top-4 transition-all duration-300 ease-in-out">
+          <div class="w-10 h-1 bg-white mx-auto mb-6"></div>
+          <p>A project about environmental protection</p>
+        </div>
+      </a>
+      <a href="https://prometheusalpha.github.io/Sort-Visualizer/" target="_blank" rel="noopener noreferrer"
+        class="aspect-square relative flex group flex-col justify-evenly items-center overflow-hidden">
+        <div class="bg-[url('./image/sort-visualizer.jpg')] w-full h-full absolute bg-cover bg-center group-hover:scale-110
+            transition-all duration-300 ease-in-out shadow-[inset_0_0_0_2000px_rgba(0,0,0,0.3)] z-0">
+        </div>
+        <div class="absolute -top-16 right-8 p-4 bg-slate-800 group-hover:top-0 transition-all duration-300">View
+          project</div>
+        <h2
+          class="z-1 text-5xl bottom-0 font-bold relative group-hover:bottom-4 transition-all duration-300 ease-in-out">
+          Sort Visualizer</h2>
+        <div class="z-1 lg:text-lg relative top-0 group-hover:top-4 transition-all duration-300 ease-in-out">
+          <div class="w-10 h-1 bg-white mx-auto mb-6"></div>
+          <p>A project that helps to understand sorting algorithms</p>
+        </div>
+      </a>
+      <a href="https://marketplace.visualstudio.com/items?itemName=PrometheusAlpha.internal-css" target="_blank"
+        rel="noopener noreferrer" class="aspect-square relative flex group flex-col justify-evenly items-center
+          overflow-hidden text-center">
+        <div class="bg-blue-400 w-full h-full absolute bg-cover bg-center group-hover:scale-110
+            transition-all duration-300 ease-in-out shadow-[inset_0_0_0_2000px_rgba(0,0,0,0.3)] z-0">
+        </div>
+        <div class="absolute -top-16 right-8 p-4 bg-slate-800 group-hover:top-0 transition-all duration-300">View
+          project</div>
+        <h2
+          class="z-1 text-5xl bottom-0 font-bold relative group-hover:bottom-4 transition-all duration-300 ease-in-out">
+          Internal CSS</h2>
+        <div class="z-1 lg:text-lg relative top-0 group-hover:top-4 transition-all duration-300 ease-in-out">
+          <div class="w-10 h-1 bg-white mx-auto mb-6"></div>
+          <p>A VSCode extension that helps to bundle CSS in file to CSS in HTML <b>(Experimental)</b> </p>
+        </div>
+      </a>
+      <a href="https://prometheusalpha.github.io/PasswordGenerator" target="_blank" rel="noopener noreferrer" class="aspect-square lg:aspect-[2/1] lg:col-span-2 relative flex group flex-col justify-evenly items-center
+        overflow-hidden">
+        <div class="bg-[url('./image/password.jpg')] w-full h-full absolute bg-cover bg-center group-hover:scale-110
+            transition-all duration-300 ease-in-out shadow-[inset_0_0_0_2000px_rgba(0,0,0,0.3)] z-0">
+        </div>
+        <div class="absolute -top-16 right-8 p-4 bg-slate-800 group-hover:top-0 transition-all duration-300">View
+          project</div>
+        <h2
+          class="z-1 text-5xl bottom-0 font-bold relative group-hover:bottom-4 transition-all duration-300 ease-in-out">
+          Password Generator</h2>
+        <div class="z-1 lg:text-lg relative top-0 group-hover:top-4 transition-all duration-300 ease-in-out">
+          <div class="w-10 h-1 bg-white mx-auto mb-6"></div>
+          <p>A strong, random password generator with customizable length and complexity.</p>
+        </div>
+      </a>
+    </section>
+  </div>
+  <div class="max-w-7xl mx-auto my-40 px-10">
+    <h1 class="text-7xl font-bold -mb-5 ml-3">Hey there.</h1>
+    <div class="lg:grid grid-cols-2 bg-slate-800  min-h-[40rem]">
+      <div class="text-lg max-w-xl mx-auto pt-20 p-8">
+        <p class="text-3xl lg:text-4xl cursor-pointer hover:underline mb-10 font-bold hover:after:content-['_(Click_to_copy)']"
+          id="email">
+          hoangnguyen.hn212.hn<br />@gmail.com</p>
+        <div class="w-10 h-1 bg-white my-5"></div>
+        An 19 years old software engineering student. I love to design and
         make things. I love frontend coding and reading books.
         <br /><br />
-        Eager to learn new knowledge, I am willing to walk in and face any new
-        challenges that the universe may throw at me. With my quick learning
-        enthusiasm, I can understand new knowledge more quickly, thus solve
-        problems faster. I was never satisfied with my skills and constantly
-        learning to know more. I never refuse anything just because I don't
-        know about it. I believe humans can learn and be proficient at
-        anything. And can do it quick enough.
-        <br /><br />My favourite quote: “Physics is like sex: sure, it may
-        give some practical results, but that's not why we do it.” - Richard
-        P. Feynman
+        <p class="text-2xl">Say hi!</p>
+        <section class="flex gap-8 mt-12">
+          <a href="https://www.facebook.com/prometheusAlph/" target="_blank" rel="noopener noreferrer" class="facebook">
+            <img src="./image/fb.svg" alt="" class="w-8 h-8 text-white">
+          </a>
+          <a href="https://github.com/prometheusalpha" target="_blank" rel="noopener noreferrer" class="github">
+            <img src="./image/github.svg" alt="" class="w-8 h-8 text-white">
+          </a>
+          <a href="https://www.linkedin.com/in/prometheusalpha/" target="_blank" rel="noopener noreferrer"
+            class="linkedin">
+            <img src="./image/linkedin.svg" alt="" class="w-8 h-8 text-white">
+          </a>
+        </section>
+      </div>
+      <div class="bg-[url('./image/portrait.jpg')] bg-cover bg-center">
       </div>
     </div>
-  </section>
-  <section class="works">
-    <div class="max-width">
-      <h1 class="section-title z-99 relative">I build projects.</h1>
-      <section class="works__container">
-        <a href="https://prometheusalpha.github.io/GreenWorld/" target="_blank" rel="noopener noreferrer"
-          class="greenworld xl works__rectangle relative flex flex-column">
-          <div class="greenworld__bg work__bg absolute full_parent"></div>
-          <div class="work__header absolute">View project</div>
-          <h2 class="work__name z-1">Green World</h2>
-          <div class="work__desc z-1">
-            <div class="line"></div>
-            <p>A project about environmental protection</p>
-          </div>
-        </a>
-        <a href="https://prometheusalpha.github.io/Sort-Visualizer/" target="_blank" rel="noopener noreferrer"
-          class="sortvisualizer sm works__rectangle works__rectangle--dark relative flex flex-column">
-          <div class="sortvisualizer__bg work__bg absolute full_parent"></div>
-          <div class="work__header absolute">View project</div>
-          <h2 class="work__name z-1">Sort Visualizer</h2>
-          <div class="work__desc z-1">
-            <div class="line"></div>
-            <p>A project that helps to understand sorting algorithms</p>
-          </div>
-        </a>
-        <a href="https://marketplace.visualstudio.com/items?itemName=PrometheusAlpha.internal-css" target="_blank"
-          rel="noopener noreferrer" class="new sm works__rectangle works__rectangle--dark relative flex flex-column">
-          <div class="work__header absolute">View project</div>
-          <h2 class="work__name z-1">Internal CSS</h2>
-          <div class="work__desc z-1">
-            <div class="line"></div>
-            <p>A VSCode extension that helps to bundle CSS in file to CSS in HTML <b>(Experimental)</b> </p>
-          </div>
-        </a>
-        <a href="https://prometheusalpha.github.io/PasswordGenerator" target="_blank" rel="noopener noreferrer"
-          class="greenworld xl works__rectangle relative flex flex-column">
-          <div class="passgen__bg work__bg absolute full_parent"></div>
-          <div class="work__header absolute">View project</div>
-          <h2 class="work__name z-1">Password Generator</h2>
-          <div class="work__desc z-1">
-            <div class="line"></div>
-            <p>A strong, random password generator with customizable length and complexity.</p>
-          </div>
-        </a>
-      </section>
-    </div>
-  </section>
-  <section class="contact">
-    <div class="max-width">
-      <h1 class="section-title z-99 relative">Contact</h1>
-      <section class="contact__menu flex flex-column">
-        <p id="email"></p>
-        <a href="https://www.facebook.com/prometheux2/" target="_blank" rel="noopener noreferrer"
-          class="facebook">Facebook</a>
-        <a href="https://github.com/PrometheusAlpha" target="_blank" rel="noopener noreferrer" class="github">Github</a>
-        <a href="https://www.linkedin.com/in/prometheusalpha/" target="_blank" rel="noopener noreferrer"
-          class="linkedin">LinkedIn</a>
-      </section>
-    </div>
-  </section>
+  </div>
 </body>
 
 </html>

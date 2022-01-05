@@ -21,7 +21,7 @@ class TxtType {
       this.txt = fullTxt.substring(0, this.txt.length + 1);
     }
 
-    this.target.innerHTML = '<span class="wrap">' + this.txt + "</span>";
+    this.target.innerHTML = '<span class="wrap border-r-white border-r-4" >' + this.txt + "</span>";
 
     var that = this;
     let delta = 150;
