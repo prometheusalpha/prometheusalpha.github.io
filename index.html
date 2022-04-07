@@ -6,132 +6,72 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/png" href="image/favicon.png" />
-  <title>Hoang</title>
+  <title>Nguyễn Huy Hoàng - Developer</title>
 
-  <link rel="preconnect" href="style/main.css" />
+  <link rel="preconnect" href="index.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" as="image" href="image/GreenWorld.webp">
+  <link rel="preload" as="image" href="image/green-world.webp">
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style/main.css" />
+  <link rel="stylesheet" href="index.css" />
 
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="scripts/select.js" defer async type="module"></script>
   <script src="scripts/index.js" defer async type="module"></script>
 </head>
 
-<body class="font-['Inter'] bg-slate-900 text-white">
-  <section class="top-8 right-8 fixed z-10">
-    <a href="#">hoang</a>
+<body class="font-['SF_Pro_Text'] bg-slate-900 text-white snap-y snap-mandatory overflow-y-scroll">
+  <section class="top-8 right-8 fixed z-100">
+    <a href="#">prometheus_alpha</a>
   </section>
-  <section class="relative">
-    <div class="w-full h-screen md:pl-[24vw] pl-[10vw] flex flex-col pt-[30vh]">
-      <article class="flex flex-col text-5xl md:text-8xl font-bold">
-        <h1>Hello.</h1>
-        <h1 class="text-blue-600">I am</h1>
-        <h1 class="text-blue-600">
-          <p id="typewrite" data-type='[ "Hoàng.", "a developer."]'></p>
-        </h1>
-      </article>
+
+  <section class="grid place-items-center h-screen snap-start">
+    <div class="absolute w-full h-[110vh] z-10 flex items-center overflow-hidden px-[5vmax]">
+      <div class="mb-[-950px] font-semibold" id="select">
+      </div>
+      <div class="grow absolute right-[5vmax] z-[-1]">
+        <a href="https://prometheusalpha.github.io/GreenWorld/" target="_blank" id="projects_link">
+          <img src="image/green-world.webp" id="projects_img" class="h-[28vmax] bg-blue-800 " alt="">
+        </a>
+      </div>
     </div>
   </section>
 
-  <div class="max-w-7xl mx-auto px-10">
-    <h1 class="text-7xl relative font-bold -mb-4 z-10">I build projects.</h1>
-    <section class="lg:grid grid-cols-2">
-      <a href="https://prometheusalpha.github.io/GreenWorld/" target="_blank" rel="noopener noreferrer"
-        class="aspect-square lg:aspect-[2/1] lg:col-span-2 relative flex group flex-col justify-evenly items-center overflow-hidden">
-        <div class="bg-[url('./image/GreenWorld.webp')] w-full h-full absolute bg-cover bg-center group-hover:scale-110
-            transition-all duration-300 ease-in-out shadow-[inset_0_0_0_2000px_rgba(0,0,0,0.3)]">
-        </div>
-        <div class="absolute -top-16 right-8 p-4 bg-slate-800 group-hover:top-0 transition-all duration-300">
-          View project</div>
-        <h2
-          class="z-1 text-5xl bottom-0 font-bold relative group-hover:bottom-4 transition-all duration-300 ease-in-out">
-          Green
-          World</h2>
-        <div class="z-1 lg:text-lg relative top-0 group-hover:top-4 transition-all duration-300 ease-in-out">
-          <div class="w-10 h-1 bg-white mx-auto mb-6"></div>
-          <p>A project about environmental protection</p>
-        </div>
-      </a>
-      <a href="https://prometheusalpha.github.io/Sort-Visualizer/" target="_blank" rel="noopener noreferrer"
-        class="aspect-square relative flex group flex-col justify-evenly items-center overflow-hidden">
-        <div class="bg-[url('./image/sort-visualizer.jpg')] w-full h-full absolute bg-cover bg-center group-hover:scale-110
-            transition-all duration-300 ease-in-out shadow-[inset_0_0_0_2000px_rgba(0,0,0,0.3)] z-0">
-        </div>
-        <div class="absolute -top-16 right-8 p-4 bg-slate-800 group-hover:top-0 transition-all duration-300">View
-          project</div>
-        <h2
-          class="z-1 text-5xl bottom-0 font-bold relative group-hover:bottom-4 transition-all duration-300 ease-in-out">
-          Sort Visualizer</h2>
-        <div class="z-1 lg:text-lg relative top-0 group-hover:top-4 transition-all duration-300 ease-in-out">
-          <div class="w-10 h-1 bg-white mx-auto mb-6"></div>
-          <p>A project that helps to understand sorting algorithms</p>
-        </div>
-      </a>
-      <a href="https://marketplace.visualstudio.com/items?itemName=PrometheusAlpha.internal-css" target="_blank"
-        rel="noopener noreferrer" class="aspect-square relative flex group flex-col justify-evenly items-center
-          overflow-hidden text-center">
-        <div class="bg-blue-400 w-full h-full absolute bg-cover bg-center group-hover:scale-110
-            transition-all duration-300 ease-in-out shadow-[inset_0_0_0_2000px_rgba(0,0,0,0.3)] z-0">
-        </div>
-        <div class="absolute -top-16 right-8 p-4 bg-slate-800 group-hover:top-0 transition-all duration-300">View
-          project</div>
-        <h2
-          class="z-1 text-5xl bottom-0 font-bold relative group-hover:bottom-4 transition-all duration-300 ease-in-out">
-          Internal CSS</h2>
-        <div class="z-1 lg:text-lg relative top-0 group-hover:top-4 transition-all duration-300 ease-in-out">
-          <div class="w-10 h-1 bg-white mx-auto mb-6"></div>
-          <p>A VSCode extension that helps to bundle CSS in file to CSS in HTML <b>(Experimental)</b> </p>
-        </div>
-      </a>
-      <a href="https://prometheusalpha.github.io/PasswordGenerator" target="_blank" rel="noopener noreferrer" class="aspect-square lg:aspect-[2/1] lg:col-span-2 relative flex group flex-col justify-evenly items-center
-        overflow-hidden">
-        <div class="bg-[url('./image/password.jpg')] w-full h-full absolute bg-cover bg-center group-hover:scale-110
-            transition-all duration-300 ease-in-out shadow-[inset_0_0_0_2000px_rgba(0,0,0,0.3)] z-0">
-        </div>
-        <div class="absolute -top-16 right-8 p-4 bg-slate-800 group-hover:top-0 transition-all duration-300">View
-          project</div>
-        <h2
-          class="z-1 text-5xl bottom-0 font-bold relative group-hover:bottom-4 transition-all duration-300 ease-in-out">
-          Password Generator</h2>
-        <div class="z-1 lg:text-lg relative top-0 group-hover:top-4 transition-all duration-300 ease-in-out">
-          <div class="w-10 h-1 bg-white mx-auto mb-6"></div>
-          <p>A strong, random password generator with customizable length and complexity.</p>
-        </div>
-      </a>
-    </section>
-  </div>
-  <div class="max-w-7xl mx-auto my-40 px-10">
-    <h1 class="text-7xl font-bold -mb-5 ml-3">Hey there.</h1>
-    <div class="lg:grid grid-cols-2 bg-slate-800  min-h-[40rem]">
-      <div class="text-lg max-w-xl mx-auto pt-20 p-8">
-        <p class="text-3xl lg:text-4xl cursor-pointer hover:underline mb-10 font-bold hover:after:content-['_(Click_to_copy)']"
-          id="email">
-          hoangnguyen.hn212.hn<br />@gmail.com</p>
-        <div class="w-10 h-1 bg-white my-5"></div>
-        An 19 years old software engineering student. I love to design and
-        make things. I love frontend coding and reading books.
-        <br /><br />
-        <p class="text-2xl">Say hi!</p>
-        <section class="flex gap-8 mt-12">
-          <a href="https://www.facebook.com/prometheusAlph/" target="_blank" rel="noopener noreferrer" class="facebook">
-            <img src="./image/fb.svg" alt="" class="w-8 h-8 text-white">
-          </a>
-          <a href="https://github.com/prometheusalpha" target="_blank" rel="noopener noreferrer" class="github">
-            <img src="./image/github.svg" alt="" class="w-8 h-8 text-white">
-          </a>
-          <a href="https://www.linkedin.com/in/prometheusalpha/" target="_blank" rel="noopener noreferrer"
-            class="linkedin">
-            <img src="./image/linkedin.svg" alt="" class="w-8 h-8 text-white">
-          </a>
-        </section>
-      </div>
-      <div class="bg-[url('./image/portrait.jpg')] bg-cover bg-center">
-      </div>
+  <section class="bg-blue-800/30 p-[4vmax] h-screen snap-start z-10">
+    <div class="text-4xl m-10 text-justify">
+      <p>I am a front-end developer with experience working with front-end frameworks and technologies.</p>
+      <br>
+      <p>I define myself by what I can do. Skills can be learned, personality is more fundamental. I think of myself as
+        someone who can learn and adapt to new knowledge and skills quickly. Therefore, I will keep learning new
+        knowledge as needed, challenging myself, and reaching new goals.</p>
+      <br>
+      <p>As a person who strongly believes in practicality, I am focused on actualizing ideas rather than thinking of
+        big, bold, world-changing ideas. Instead, I want to turn ideas into reality and do it well.</p>
+      <br>
+      <p>I also enjoy designing and making high-quality products, solving problems, and reading good books.</p>
     </div>
-  </div>
-</body>
+  </section>
+
+  <section class="w-full h-screen grid place-items-center snap-start">
+    <div class="flex flex-col items-center">
+      <h1 class="font-bold text-6xl">Got a new idea ?</h1>
+      <section class="flex items-center gap-8 mt-12">
+        <a href="https://www.facebook.com/theprometheusalpha/" target="_blank" rel="noopener noreferrer"
+          class="facebook">
+          <img src="./image/fb.svg" alt="" class="w-8 h-8 text-white">
+        </a>
+        <a href="https://github.com/prometheusalpha" target="_blank" rel="noopener noreferrer" class="github">
+          <img src="./image/github.svg" alt="" class="w-8 h-8 text-white">
+        </a>
+        <a href="https://www.linkedin.com/in/prometheusalpha/" target="_blank" rel="noopener noreferrer"
+          class="linkedin">
+          <img src="./image/linkedin.svg" alt="" class="w-8 h-8 text-white">
+        </a>
+        <div class="cursor-pointer" id="email" title="Copy only">
+          <img src="./image/mail.svg" alt="" class="w-10 h-10 text-white">
+        </div>
+    </div>
+  </section>
 
 </html>

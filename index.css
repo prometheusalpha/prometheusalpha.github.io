@@ -1,0 +1,23 @@
+.link::after {
+  content: " ";
+  width: 100%;
+  height: 0px;
+  position: absolute;
+  inset: auto 0 0 0;
+  z-index: -1;
+  transition: all 0.3s ease-in-out;
+  background: #ffffff;
+}
+
+html {
+  font-size: min(2vmin, 16px);
+  scroll-behavior: smooth;
+}
+
+.link:hover {
+  color: #313131;
+}
+
+.link:hover::after {
+  height: 100%;
+}
