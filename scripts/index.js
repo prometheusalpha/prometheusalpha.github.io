@@ -5,7 +5,7 @@ document.querySelector("#select").addEventListener("mousemove", function (event)
   moveCursor(event);
 });
 
-document.querySelector("#select").addEventListener("mouseleave", function (event) {
+document.querySelector("#select").addEventListener("mouseleave", function () {
   svgCursor.style.display = 'none';
 });
 
