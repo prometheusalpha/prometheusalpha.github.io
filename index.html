@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/png" href="image/favicon.png" />
+  <link rel="icon" type="image/png" href="image/favicon.svg" />
   <title>Nguyễn Huy Hoàng - Developer</title>
 
   <link rel="preconnect" href="index.css" />
@@ -22,56 +22,78 @@
 </head>
 
 <body class="font-['SF_Pro_Text'] bg-slate-900 text-white snap-y snap-mandatory overflow-y-scroll">
-  <section class="top-8 right-8 fixed z-100">
+  <!-- <section class="top-8 right-8 fixed z-[20]">
     <a href="#">prometheus_alpha</a>
-  </section>
+  </section> -->
 
-  <section class="grid place-items-center h-screen snap-start">
-    <div class="absolute w-full h-[110vh] z-10 flex items-center overflow-hidden px-[5vmax]">
-      <div class="mb-[-950px] font-semibold" id="select">
+  <div class="relative">
+    <section class="grid place-items-center h-screen snap-start">
+      <div class="">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-24 w-24 absolute z-50" fill="none" viewBox="0 0 48 48"
+          stroke="#3498db" stroke-width="2" id="svg-cursor" style="display: none;">
+          <circle cx="24" cy="24" r="22" stroke="#202040" stroke-width="2" fill="#2020509a" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M17 20 l7-7 7 7" />
+          <path stroke-linecap="round" stroke-linejoin="round" d="M31 28l-7 7-7-7" />
+        </svg>
       </div>
-      <div class="grow absolute right-[5vmax] z-[-1]">
-        <a href="https://prometheusalpha.github.io/GreenWorld/" target="_blank" id="projects_link">
-          <img src="image/green-world.webp" id="projects_img" class="h-[28vmax] bg-blue-800 " alt="">
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <section class="bg-blue-800/30 p-[4vmax] h-screen snap-start z-10">
-    <div class="text-4xl m-10 text-justify">
-      <p>I am a front-end developer with experience working with front-end frameworks and technologies.</p>
-      <br>
-      <p>I define myself by what I can do. Skills can be learned, personality is more fundamental. I think of myself as
-        someone who can learn and adapt to new knowledge and skills quickly. Therefore, I will keep learning new
-        knowledge as needed, challenging myself, and reaching new goals.</p>
-      <br>
-      <p>As a person who strongly believes in practicality, I am focused on actualizing ideas rather than thinking of
-        big, bold, world-changing ideas. Instead, I want to turn ideas into reality and do it well.</p>
-      <br>
-      <p>I also enjoy designing and making high-quality products, solving problems, and reading good books.</p>
-    </div>
-  </section>
-
-  <section class="w-full h-screen grid place-items-center snap-start">
-    <div class="flex flex-col items-center">
-      <h1 class="font-bold text-6xl">Got a new idea ?</h1>
-      <section class="flex items-center gap-8 mt-12">
-        <a href="https://www.facebook.com/theprometheusalpha/" target="_blank" rel="noopener noreferrer"
-          class="facebook">
-          <img src="./image/fb.svg" alt="" class="w-8 h-8 text-white">
-        </a>
-        <a href="https://github.com/prometheusalpha" target="_blank" rel="noopener noreferrer" class="github">
-          <img src="./image/github.svg" alt="" class="w-8 h-8 text-white">
-        </a>
-        <a href="https://www.linkedin.com/in/prometheusalpha/" target="_blank" rel="noopener noreferrer"
-          class="linkedin">
-          <img src="./image/linkedin.svg" alt="" class="w-8 h-8 text-white">
-        </a>
-        <div class="cursor-pointer" id="email" title="Copy only">
-          <img src="./image/mail.svg" alt="" class="w-10 h-10 text-white">
+      <div class="absolute w-full h-[100vh] z-10 flex items-center overflow-hidden px-[5vmax]">
+        <div class="mb-[-770px] font-semibold" id="select">
         </div>
-    </div>
-  </section>
+        <div class="grow absolute right-[5vmax] z-[-1]">
+          <a href="https://prometheusalpha.github.io/GreenWorld/" target="_blank" id="projects_link">
+            <img src="image/green-world.webp" id="projects_img" class="h-[28vmax] bg-blue-800 brightness-50" alt="">
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-blue-800/30 p-[4vmax] min-h-screen snap-start z-10">
+      <div class="text-4xl m-10 text-justify">
+        <p>I am a front-end developer with experience working with front-end frameworks and technologies.</p>
+        <br>
+        <p>I define myself by what I can do. Skills can be learned, personality is more fundamental. I think of myself
+          as
+          someone who can learn and adapt to new knowledge and skills quickly. Therefore, I will keep learning new
+          knowledge as needed, challenging myself, and reaching new goals.</p>
+        <br>
+        <p>As a person who strongly believes in practicality, I am focused on actualizing ideas rather than thinking of
+          big, bold, world-changing ideas. Instead, I want to turn ideas into reality and do it well.</p>
+        <br>
+        <p>I also enjoy designing and making high-quality products, solving problems, and reading good books.</p>
+      </div>
+    </section>
+
+    <section class="w-full h-screen grid place-items-center px-8">
+      <div class="flex flex-col items-center">
+        <h1 class="text-3xl text-gray-500 text-center">
+          'Goals only works with planes. On the ground, you just need a
+          direction.' - Me, 2022
+        </h1>
+        <section class="flex items-center gap-8 mt-12">
+          <a href="https://www.facebook.com/theprometheusalpha/" target="_blank" rel="noopener noreferrer"
+            class="facebook rounded-full border-2 border-gray-600 p-4 hover:border-gray-100">
+            <img src="./image/fb.svg" alt="" class="w-8 h-8 text-white">
+          </a>
+          <a href="https://github.com/prometheusalpha" target="_blank" rel="noopener noreferrer"
+            class="github rounded-full border-2 border-gray-600 p-4 hover:border-gray-100">
+            <img src="./image/github.svg" alt="" class="w-8 h-8 text-white">
+          </a>
+          <a href="https://www.linkedin.com/in/prometheusalpha/" target="_blank" rel="noopener noreferrer"
+            class="linkedin rounded-full border-2 border-gray-600 p-4 hover:border-gray-100">
+            <img src="./image/linkedin.svg" alt="" class="w-8 h-8 text-white">
+          </a>
+          <a href="mailto:hoangnguyen.hn212.hn@gmail.com" target="_blank" rel="noopener noreferrer"
+            class="linkedin rounded-full border-2 border-gray-600 p-4 hover:border-gray-100">
+            <img src="./image/mail.svg" alt="" class="w-10 h-10 text-white">
+          </a>
+        </section>
+        <p class="text-2xl text-gray-500 pt-24">Created by prometheusalpha @2022</p>
+        <p class="text-2xl text-gray-500 pt-2 flex items-center">Made with
+          <img src="image/tailwind.svg" class="h-8 w-8 pt-2" alt="">
+          Tailwind</p>
+      </div>
+    </section>
+  </div>
+</body>
 
 </html>

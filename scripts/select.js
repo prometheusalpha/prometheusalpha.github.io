@@ -7,19 +7,19 @@ const PROJECTS = [{
   {
     id: 2,
     title: "Sort Visualizer",
-    image: "sort-visualizer.jpg",
+    image: "sortvis.png",
     link: "https://prometheusalpha.github.io/Sort-Visualizer"
   },
   {
     id: 3,
     title: "Internal CSS",
-    image: "bg.jpg",
+    image: "internal.png",
     link: "https://marketplace.visualstudio.com/items?itemName=PrometheusAlpha.internal-css"
   },
   {
     id: 4,
     title: "Password Generator",
-    image: "password-generator.jpg",
+    image: "passgen.png",
     link: "https://prometheusalpha.github.io/PasswordGenerator"
   },
   {
@@ -29,7 +29,7 @@ const PROJECTS = [{
     link: "https://ascii-tree.vercel.app/"
   }
 ];
-const SELECT_MOVE_DISTANCE = 475;
+const SELECT_MOVE_DISTANCE = 385;
 const DISPAY_PROJECTS = [...PROJECTS, ...PROJECTS, ...PROJECTS];
 let current = 5;
 

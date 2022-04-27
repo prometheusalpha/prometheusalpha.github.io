@@ -21,3 +21,29 @@ html {
 .link:hover::after {
   height: 100%;
 }
+
+#select *,
+#svg-cursor {
+  cursor: none !important;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #909090;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #666;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  border-radius: 10px;
+  background: #555;
+}
