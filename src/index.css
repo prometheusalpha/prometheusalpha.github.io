@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .link::after {
   content: " ";
   width: 100%;
@@ -10,7 +14,7 @@
 }
 
 html {
-  font-size: min(2vmin, 16px);
+  font-size: min(2.5vmin, 20px);
   scroll-behavior: smooth;
 }
 
