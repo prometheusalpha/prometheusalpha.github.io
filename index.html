@@ -5,6 +5,9 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="A back-end developer and last year university student with experience working with back-end and data frameworks and technologies." />
+  <meta name="author" content="PrometheusAlpha" />
 
   <meta name="keywords"
     content="prometheusalpha, prometheusalpha JS, prometheusalpha developer, Prometheusalpha, PrometheusAlpha, CV, Resume, curriculum vitae, portfolio" />
@@ -30,7 +33,7 @@
       <h1 class="text-5xl py-3">$ whoami</h1>
       <h1 class="text-5xl py-3">I am Nguyễn Huy Hoàng</h1>
       <h1 class="text-5xl py-3">$ ls</h1>
-      <h1 class="text-5xl py-3 flex flex-col md:flex-row gap-8">
+      <h1 class="text-5xl py-3 flex flex-col lg:flex-row gap-8">
         <a href="#about" class="text-green-300 hover:underline">about</a>
         <a href="#experiences" class="text-green-300 hover:underline">experiences</a>
         <a href="#contacts" class="text-green-300 hover:underline">contacts</a>
@@ -43,15 +46,18 @@
           <span class="text-gray-800 row-span-full col-span-full" id="placeholder">about</span>
         </div>
       </h1>
-      <div class="text-5xl py-3 text-gray-800"><kbd class="border-2 border-gray-800 px-3">&rarr;</kbd> to fill</div>
+      <div class="text-5xl py-3 text-gray-800 hidden lg:block"><kbd class="border-2 border-gray-800 px-3">&rarr;</kbd>
+        to fill</div>
     </div>
   </div>
 
   <section class="flex flex-col items-center min-h-screen mb-48 snap-start z-10" id="about">
     <h1 class="text-center text-7xl py-16 font-semibold">ABOUT ME</h1>
-    <div class="lg:flex max-w-7xl">
+    <div class="lg:flex max-w-7xl items-center">
+      <img src="image/portrait.jpg" alt="" class="mx-auto md:w-96 w-full h-auto" />
       <div class="text-2xl m-10 text-justify">
         <div>
+          <h1 class="text-4xl py-8">Hi, I'm <span class="text-green-400">Nguyễn Huy Hoàng</span></h1>
           <p class="leading-normal">
             I am a back-end developer and last year university student with
             experience working with back-end and data frameworks and
@@ -77,35 +83,6 @@
             </li>
             <li>⚡ Fun fact: My productivity depends a little on music 😄</li>
           </ul>
-        </div>
-      </div>
-      <div class="grow p-10">
-        <div class="flex flex-col items-center">
-          <img src="image/portrait.jpg" alt="" class="md:w-96 w-full" />
-          <div class="text-xl w-full">
-            <div class="space-y-5">
-              <div class="p-4 flex gap-4">
-                <div class="font-bold">Name:</div>
-                <div class="">Nguyễn Huy Hoàng</div>
-              </div>
-            </div>
-            <div class="space-y-5">
-              <div class="p-4 flex gap-4">
-                <div class="font-bold">Email:</div>
-                <div class="">
-                  <a href="mailto:hoangnguyen.hn212.hn@gmail.com" class="text-green-300">
-                    hoangnguyen.hn212.hn@gmail.com
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="space-y-5">
-              <div class="p-4 flex gap-4">
-                <div class="font-bold">Languages:</div>
-                <div class="">English, Vietnamese</div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -198,6 +175,10 @@
       </p>
     </div>
   </section>
+  <div onclick="window.scrollTo({top: 0, behavior: 'smooth'});"
+    class="cursor-pointer fixed right-4 bottom-4 text-center text-5xl lg:text-xl text-gray-500">
+    &uarr;
+  </div>
 </body>
 
 </html>

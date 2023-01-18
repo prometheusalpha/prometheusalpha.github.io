@@ -1,16 +1,19 @@
 const values = ["about", "experiences", "contacts"];
 
+// focus on input on load
+window.onload = function () {
+  document.querySelector("#cd").focus();
+};
+
 document.querySelector("#cd").addEventListener("input", function () {
   suggest();
 });
 
 document.querySelector("#cd").addEventListener("keyup", function (event) {
-  // key right keycode
   const arrowRight = 39;
   if (event.keyCode == arrowRight) {
     tabListener();
   }
-  // enter keycode
   const enter = 13;
   if (event.keyCode == enter) {
     enterListener();
@@ -19,11 +22,10 @@ document.querySelector("#cd").addEventListener("keyup", function (event) {
 
 function suggest() {
   let cdVal = document.querySelector("#cd").value;
-  for (let i = 0; i < values.length; i++) {
-    // check if current value starts with cdVal
-    if (values[i].startsWith(cdVal) && cdVal != "") {
-      // change value of placheholder
-      document.querySelector("#placeholder").innerText = values[i];
+  // for each
+  for (let value of values) {
+    if (value.startsWith(cdVal) && cdVal != "") {
+      document.querySelector("#placeholder").innerText = value;
       break;
     } else {
       document.querySelector("#placeholder").innerText = "";
@@ -46,4 +48,6 @@ function enterListener() {
     return;
   }
   window.location.href = `#${placeholder}`;
+  // clear input
+  document.querySelector("#cd").value = "";
 }
