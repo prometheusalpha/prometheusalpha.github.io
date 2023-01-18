@@ -20,21 +20,30 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/dist/output.css" />
 
-  <!-- <script src="scripts/select.js" defer async type="module"></script> -->
+  <script src="scripts/select.js" defer async type="module"></script>
   <!-- <script src="scripts/index.js" defer async type="module"></script> -->
 </head>
 
 <body class="font-['Inter'] bg-gray-900 text-gray-300 snap-y snap-mandatory overflow-y-scroll">
   <div class="h-screen flex justify-start px-[4vw] items-center">
     <div class="font-['IBM_Plex_Mono']">
-      <h1 class="text-5xl py-6">$ whoami</h1>
-      <h1 class="text-5xl py-6">I am Nguyễn Huy Hoàng</h1>
-      <h1 class="text-5xl py-6">$ ls</h1>
-      <h1 class="text-5xl py-6">
-        <a href="#about" class="text-green-300">About</a>
-        <a href="#projects" class="text-green-300">Experiences</a>
-        <a href="#contacts" class="text-green-300">Contacts</a>
+      <h1 class="text-5xl py-3">$ whoami</h1>
+      <h1 class="text-5xl py-3">I am Nguyễn Huy Hoàng</h1>
+      <h1 class="text-5xl py-3">$ ls</h1>
+      <h1 class="text-5xl py-3 flex flex-col md:flex-row gap-8">
+        <a href="#about" class="text-green-300 hover:underline">about</a>
+        <a href="#experiences" class="text-green-300 hover:underline">experiences</a>
+        <a href="#contacts" class="text-green-300 hover:underline">contacts</a>
       </h1>
+
+      <h1 class="text-5xl py-3 items-center hidden lg:flex">$ cd&nbsp;
+        <div class="grid items-center">
+          <input type="text" id="cd"
+            class="bg-transparent focus:outline-none placeholder:text-gray-800 z-10 row-span-full col-span-full" />
+          <span class="text-gray-800 row-span-full col-span-full" id="placeholder">about</span>
+        </div>
+      </h1>
+      <div class="text-5xl py-3 text-gray-800"><kbd class="border-2 border-gray-800 px-3">&rarr;</kbd> to fill</div>
     </div>
   </div>
 
@@ -102,7 +111,7 @@
     </div>
   </section>
 
-  <div class="relative max-w-7xl mx-auto" id="projects">
+  <div class="relative max-w-7xl mx-auto" id="experiences">
     <div class="mx-auto md:min-h-screen min-h-[60vmax] flex flex-col">
       <h1 class="text-center text-7xl font-semibold py-10">EXPERIENCES</h1>
       <ol class="relative border-l border-gray-700 md:text-xl text-3xl grow mx-[4vw] pb-20">

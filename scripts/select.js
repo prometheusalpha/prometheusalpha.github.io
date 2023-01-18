@@ -1,74 +1,49 @@
-const PROJECTS = [{
-    id: 1,
-    title: "Green World",
-    image: "green-world.webp",
-    link: "https://prometheusalpha.github.io/GreenWorld"
-  },
-  {
-    id: 2,
-    title: "Sort Visualizer",
-    image: "sortvis.png",
-    link: "https://prometheusalpha.github.io/Sort-Visualizer"
-  },
-  {
-    id: 3,
-    title: "Internal CSS",
-    image: "internal.png",
-    link: "https://marketplace.visualstudio.com/items?itemName=PrometheusAlpha.internal-css"
-  },
-  {
-    id: 4,
-    title: "Password Generator",
-    image: "passgen.png",
-    link: "https://prometheusalpha.github.io/PasswordGenerator"
-  },
-  {
-    id: 5,
-    title: "ASCII Tree",
-    image: "ascii-tree.png",
-    link: "https://ascii-tree.vercel.app/"
+const values = ["about", "experiences", "contacts"];
+
+document.querySelector("#cd").addEventListener("input", function () {
+  suggest();
+});
+
+document.querySelector("#cd").addEventListener("keyup", function (event) {
+  // key right keycode
+  const arrowRight = 39;
+  if (event.keyCode == arrowRight) {
+    tabListener();
   }
-];
-const SELECT_MOVE_DISTANCE = 385;
-const DISPAY_PROJECTS = [...PROJECTS, ...PROJECTS, ...PROJECTS];
-let current = 5;
+  // enter keycode
+  const enter = 13;
+  if (event.keyCode == enter) {
+    enterListener();
+  }
+});
 
-const createElement = (html) => {
-  const template = document.createElement('template');
-  html = html.trim();
-  template.innerHTML = html;
-  return template.content.firstChild;
-};
-
-const createHeading = (project) => {
-  return createElement(
-    `<div class="select flex items-center"><p>0${project.id}.</p><h1 class="mx-8 my-20 cursor-pointer text-[5rem] leading-none">${project.title}</h1></div>`
-  );
-}
-
-const changeProject = (project) => {
-  current = project.id + PROJECTS.length - 1;
-  displayList();
-  document.querySelector("#select").style.marginBottom = (project.id - 3) * SELECT_MOVE_DISTANCE + "px";
-  document.querySelector("#projects_img").src = "image/" + project.image;
-  document.querySelector("#projects_link").href = project.link;
-}
-
-const displayList = () => {
-  document.querySelector("#select").innerHTML = "";
-  DISPAY_PROJECTS.forEach((project, index) => {
-    let element = createHeading(project);
-
-    if (index === current) {
-      element.classList.add("text-blue-500");
+function suggest() {
+  let cdVal = document.querySelector("#cd").value;
+  for (let i = 0; i < values.length; i++) {
+    // check if current value starts with cdVal
+    if (values[i].startsWith(cdVal) && cdVal != "") {
+      // change value of placheholder
+      document.querySelector("#placeholder").innerText = values[i];
+      break;
+    } else {
+      document.querySelector("#placeholder").innerText = "";
     }
+  }
+  if (cdVal == "") {
+    document.querySelector("#placeholder").innerText = "about";
+  }
+}
 
-    element.addEventListener("click", () => {
-      changeProject(project);
-    });
+function tabListener() {
+  let placeholder = document.querySelector("#placeholder").innerText;
+  document.querySelector("#cd").value = placeholder;
+}
 
-    document.querySelector("#select").append(element);
-  })
-};
-
-displayList();
+function enterListener() {
+  let placeholder = document.querySelector("#placeholder").innerText;
+  // check if placeholder is empty or not in values
+  if (placeholder == "" || !values.includes(placeholder)) {
+    return;
+  }
+  window.location.href = `#${placeholder}`;
+}
